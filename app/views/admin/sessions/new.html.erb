@@ -1,0 +1,39 @@
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../../index2.html"><b>平台管理</b>系统</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">登录平台管理</p>
+
+    <%= simple_form_for :session, url: admin_sessions_path, method: :post do |f| %>
+      <div class="form-group has-feedback">
+        <%= f.text_field :login, class: "form-control", placeholder: "请输入你的用户名" %>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <%= f.password_field :password, class: "form-control", placeholder: '密码' %>
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox" name="remeber_me"> 记住我
+            </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    <% end %>
+
+    <a href="#">忘记密码</a><br>
+    <a href="register.html" class="text-center">注册</a>
+
+  </div>
+  <!-- /.login-box-body -->
+</div>

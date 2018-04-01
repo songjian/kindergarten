@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: administrators
+#
+#  id              :integer          not null, primary key
+#  login           :string
+#  nickname        :string
+#  password_digest :string
+#  expire_at       :datetime
+#  state           :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  login: MyString
+  nickname: MyString
+  password_digest: MyString
+  expire_at: 2018-03-31 19:05:24
+  state: 1
+
+two:
+  login: MyString
+  nickname: MyString
+  password_digest: MyString
+  expire_at: 2018-03-31 19:05:24
+  state: 1

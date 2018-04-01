@@ -1,0 +1,27 @@
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+  <!-- sidebar menu: : style can be found in sidebar.less -->
+  <ul class="sidebar-menu" data-widget="tree">
+    <li class="active">
+      <%= link_to admin_path do %>
+        <i class="fa fa-home"></i>
+        <span>首页</span>
+      <% end %>
+    </li>
+    <li class="header">招聘管理</li>
+    <li>
+      <%= link_to admin_jobs_path do %>
+        <i class="fa fa-archive"></i>
+        <span>招聘管理</span>
+      <% end %>
+    </li>
+    <li class="header">客户管理</li>
+    <li>
+      <%= link_to admin_companies_path do %>
+        <i class="fa fa-building"></i>
+        <span>公司管理</span>
+      <% end %>
+    </li>
+  </ul>
+</section>
+<!-- /.sidebar -->
