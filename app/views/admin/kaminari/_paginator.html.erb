@@ -7,6 +7,7 @@
     paginator:     the paginator that renders the pagination tags inside
 -%>
 <%= paginator.render do -%>
+<div class="box-footer clearfix">
   <ul class="pagination pagination-sm no-margin pull-right">
     <%= prev_page_tag %>
     <% each_page do |page| -%>
@@ -20,4 +21,5 @@
       <%= next_page_tag %>
     <% end %>
   </ul>
+</div>
 <% end -%>

@@ -21,27 +21,24 @@
   <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
 </head>
 
-  <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <%= render 'layouts/admin_header' %>
 
-      <%= render 'layouts/admin_header' %>
+    <aside class="main-sidebar">
+      <%= render 'layouts/admin_sidebar' %>
+    </aside>
 
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-        <%= render 'layouts/admin_sidebar' %>
-      </aside>
-
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <%= yield %>
-      </div>
-
-      <%= render 'layouts/admin_footer' %>
-      <div class="control-sidebar-bg"></div>
+    <div class="content-wrapper">
+      <%= yield %>
     </div>
 
-    <script>
-      // $.widget.bridge('uibutton', $.ui.button);
-    </script>
-  </body>
+    <%= render 'layouts/admin_footer' %>
+    <div class="control-sidebar-bg"></div>
+  </div>
+
+  <script>
+    // $.widget.bridge('uibutton', $.ui.button);
+  </script>
+</body>
 </html>
