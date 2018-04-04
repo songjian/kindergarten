@@ -1,7 +1,7 @@
 <section class="content-header">
   <h1>
-    招聘管理
-    <small>职位列表</small>
+    公司管理
+    <small>公司列表</small>
   </h1>
   <ol class="breadcrumb">
     <li>
@@ -23,12 +23,12 @@
 
           <div class="box-tools">
             <div class="btn-group">
-              <%= link_to '新增', new_admin_job_path, class: 'btn btn-default btn-xs' %>
+              <%= link_to '新增', new_admin_company_path, class: 'btn btn-default btn-xs' %>
             </div>
 
             <%= search_form_for [:admin, @q] do |f| %>
               <div class="input-group input-group-sm" style="width: 150px;">
-                <%= f.search_field :name_cont, class: 'form-control pull-right', placeholder: '招聘职位' %>
+                <%= f.search_field :name_cont, class: 'form-control pull-right', placeholder: '请输入公司名称' %>
 
                 <div class="input-group-btn">
                   <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
@@ -38,19 +38,22 @@
           </div>
         </div>
 
+        <!-- /.box-header -->
         <div class="box-body table-responsive no-padding">
           <table class="table table-hover">
             <tr>
-              <th>招聘职位</th>
-              <th>职位描述</th>
+              <th>公司名称</th>
+              <th>联系人</th>
+              <th>联系电话</th>
               <th>操作</th>
             </tr>
-            <% @jobs.each do |job| %>
+            <% @companies.each do |company| %>
             <tr>
-              <td><%= job.name %></td>
-              <td><%= job.description %></td>
+              <td><%= company.name %></td>
+              <td><%= company.contact_name %></td>
+              <td><%= company.contact_phone %></td>
               <td>
-                <%= link_to edit_admin_job_path(job), class: 'btn btn-primary btn-xs' do %>
+                <%= link_to edit_admin_company_path(company), class: 'btn btn-primary btn-xs' do %>
                   <i class="fa fa-edit"></i> 编辑
                 <% end %>
               </td>
@@ -58,8 +61,10 @@
             <% end %>
           </table>
         </div>
-        <%= paginate @jobs, views_prefix: 'admin' %>
+        <!-- /.box-body -->
+        <%= paginate @companies, views_prefix: 'admin' %>
       </div>
+      <!-- /.box -->
     </div>
   </div>
 </section>

@@ -1,0 +1,36 @@
+<section class="content-header">
+  <h1>
+    招聘管理
+    <small>新增职位</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+      <%= link_to admin_path do %>
+        <i class="fa fa-home"></i> 首页
+      <% end %>
+    </li>
+    <li class="active">招聘管理</li>
+    <li class="active">新增职位</li>
+  </ol>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">新增职位</h3>
+        </div>
+        <%= simple_form_for [:admin, @company], wrapper: :horizontal_form do |f| %>
+          <%= f.input :name, label: '公司名称', placeholder: '' %>
+          <%= f.input :contact_name, label: '联系人' %>
+          <%= f.input :contact_phone, label: '联系电话' %>
+          <%= f.input :address, label: '地址' %>
+          <div class="box-footer">
+            <%= f.button :submit, '提交' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

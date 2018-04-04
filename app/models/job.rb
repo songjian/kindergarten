@@ -11,5 +11,7 @@
 
 class Job < ApplicationRecord
 
-  scope :sorted, -> { order(created_at: :asc) }
+  validates :name, presence: true
+
+  scope :sorted, -> { order(created_at: :desc) }
 end
