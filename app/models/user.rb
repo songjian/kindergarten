@@ -8,12 +8,15 @@
 #  remeber_digest  :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  kind            :integer          default("headhunter")
 #
 
 class User < ApplicationRecord
   has_secure_password
   attr_accessor :remeber_digest
   validates :password, :length => { :minimum => 6 }
+
+  enum kind: { boss: 1, headhunter: 2 }
 
   #用来加密remeber_token，然后保存到数据库中的remeber_digest中去
   def self.digest(string)

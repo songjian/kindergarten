@@ -8,6 +8,7 @@
 #  remeber_digest  :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  kind            :integer          default("headhunter")
 #
 
 require 'test_helper'
