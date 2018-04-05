@@ -14,12 +14,5 @@
 #  contact_phone   :string
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  username: MyString
-  password_digest: MyString
-
-two:
-  username: MyString
-  password_digest: MyString
+class Headhunter < User
+end

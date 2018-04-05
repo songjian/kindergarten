@@ -1,0 +1,9 @@
+<%= simple_form_for [:admin, @headhunter], wrapper: :horizontal_form do |f| %>
+  <%= f.input :name, label: '姓名', placeholder: '' %>
+  <%= f.input :contact_phone, label: '联系电话' %>
+  <%= f.input :login, label: '登录账号', placeholder: '建议使用英文字符' %>
+  <%= f.input :password, label: '登录密码', placeholder: '请设置6位以上的密码' %>
+  <div class="box-footer">
+    <%= f.button :submit, '保存' %>
+  </div>
+<% end %>

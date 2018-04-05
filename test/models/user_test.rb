@@ -8,7 +8,10 @@
 #  remeber_digest  :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  kind            :integer          default("headhunter")
+#  type            :string
+#  name            :string
+#  nickname        :string
+#  contact_phone   :string
 #
 
 require 'test_helper'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405023722) do
+ActiveRecord::Schema.define(version: 20180405041436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,13 +42,27 @@ ActiveRecord::Schema.define(version: 20180405023722) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "organizations", force: :cascade, comment: "组织" do |t|
+    t.string "name", comment: "组织名称"
+    t.text "describe", comment: "组织描述"
+    t.string "contact_name", comment: "联系人"
+    t.string "contact_phone", comment: "联系电话"
+    t.string "address", comment: "地址"
+    t.string "type", comment: "单表继承类型"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "login"
     t.string "password_digest"
     t.string "remeber_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "kind", default: 2, comment: "类型 1:BOSS 2:猎头"
+    t.string "type", comment: "类型"
+    t.string "name", comment: "名称"
+    t.string "nickname", comment: "昵称"
+    t.string "contact_phone", comment: "联系电话"
   end
 
 end

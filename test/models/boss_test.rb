@@ -14,12 +14,10 @@
 #  contact_phone   :string
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+require 'test_helper'
 
-one:
-  username: MyString
-  password_digest: MyString
-
-two:
-  username: MyString
-  password_digest: MyString
+class BossTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

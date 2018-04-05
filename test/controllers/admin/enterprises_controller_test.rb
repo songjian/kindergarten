@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CompanyTest < ActiveSupport::TestCase
+class Admin::EnterprisesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

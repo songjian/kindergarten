@@ -31,6 +31,6 @@ class Admin::CompaniesController < Admin::BaseController
   end
 
   def set_company
-    @company = Company.find(params[:id])
+    @company = Company.find params[:id]
   end
 end
