@@ -20,4 +20,6 @@ class Organization < ApplicationRecord
 
   scope :sorted, -> { order(created_at: :desc) }
 
+  belongs_to :organization_category, optional: true
+
 end

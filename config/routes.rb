@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :enterprises
     resources :bosses
     resources :headhunters
+    resources :organization_categories
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180421131700) do
+ActiveRecord::Schema.define(version: 20180421134011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,12 @@ ActiveRecord::Schema.define(version: 20180421131700) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "organization_categories", force: :cascade do |t|
+    t.string "name", comment: "分类名称"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "organizations", force: :cascade, comment: "组织" do |t|
     t.string "name", comment: "组织名称"
     t.text "describe", comment: "组织描述"
@@ -52,6 +58,7 @@ ActiveRecord::Schema.define(version: 20180421131700) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "contact_title", comment: "联系人职位"
+    t.integer "organization_category_id", comment: "分类id"
   end
 
   create_table "users", force: :cascade do |t|
