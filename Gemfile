@@ -31,6 +31,8 @@ gem 'redis', '~> 3.0'
 gem 'bcrypt', '~> 3.1.7'
 # 管理后台模板
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+# js选择插件
+gem "select2-rails"
 # 表单
 gem 'simple_form'
 # 分页
