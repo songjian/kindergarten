@@ -1,0 +1,8 @@
+<%= simple_form_for [:admin, @article], wrapper: :horizontal_form do |f| %>
+<%= f.input :title, label: '标题', placeholder: '请输入资讯标题', input_html: {class: 'col-sm-10'} %>
+<%= select_tag 'article[article_category_id]', options_from_collection_for_select(ArticleCategory.all, "id", "name", @article.article_category_id), :multiple => false, class:'group_select' %>
+<%= f.input :content, label: '资讯内容' %>
+<div class="box-footer">
+  <%= f.button :submit, '保存' %>
+</div>
+<% end %>

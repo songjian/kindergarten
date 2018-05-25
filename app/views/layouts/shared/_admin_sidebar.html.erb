@@ -9,10 +9,10 @@
     </li>
     <li class="header">内容管理</li>
     <li>
-      <a href="#">
+      <%= link_to admin_articles_path do %>
         <i class="fa fa-newspaper-o"></i>
         <span>资讯管理</span>
-      </a>
+      <% end %>
     </li>
     <li>
       <%= link_to admin_pages_path do %>
@@ -63,6 +63,12 @@
       <%= link_to admin_organization_categories_path do %>
         <i class="fa fa-building"></i>
         <span>行业类别管理</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_article_categories_path do %>
+        <i class="fa fa-building"></i>
+        <span>资讯分类管理</span>
       <% end %>
     </li>
   </ul>
