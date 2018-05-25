@@ -25,16 +25,6 @@ ActiveRecord::Schema.define(version: 20180421134011) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "companies", force: :cascade, comment: "公司" do |t|
-    t.string "name", comment: "公司名称"
-    t.text "describe", comment: "公司描述"
-    t.string "contact_name", comment: "联系人"
-    t.string "contact_phone", comment: "联系电话"
-    t.string "address", comment: "公司地址"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "jobs", force: :cascade, comment: "职位表" do |t|
     t.string "name", comment: "职位名称"
     t.text "description", comment: "职位描述"
@@ -61,14 +51,14 @@ ActiveRecord::Schema.define(version: 20180421134011) do
     t.integer "organization_category_id", comment: "分类id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "login"
-    t.string "password_digest"
+  create_table "users", force: :cascade, comment: "用户" do |t|
+    t.string "login", comment: "登录名"
+    t.string "password_digest", comment: "密码"
     t.string "remeber_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "type", comment: "类型"
-    t.string "name", comment: "名称"
+    t.string "name", comment: "姓名"
     t.string "nickname", comment: "昵称"
     t.string "contact_phone", comment: "联系电话"
   end
