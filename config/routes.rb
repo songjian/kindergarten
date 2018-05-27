@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   scope module: 'site' do
-    resources :articles, :comments
+    resources :jobs
     get '/p/:alias', to: 'pages#show'
   end
 
