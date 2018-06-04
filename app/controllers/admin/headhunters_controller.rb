@@ -12,7 +12,7 @@ class Admin::HeadhuntersController < Admin::BaseController
 
   def create
     headhunter = Headhunter.create(headhunter_params)
-    flash[:notice] = 'BOSS创建成功'
+    flash[:notice] = '管理员创建成功'
     redirect_to admin_bosses_path
   end
 
