@@ -1,5 +1,5 @@
 class Admin::CompaniesController < Admin::BaseController
-  before_action :set_company, only: [:show, :edit, :update]
+  before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   def index
     @q = Company.sorted.ransack(params[:q])
@@ -22,6 +22,11 @@ class Admin::CompaniesController < Admin::BaseController
   def update
     @company.update(company_params)
     flash[:notice] = '修改成功'
+    redirect_to admin_companies_path
+  end
+
+  def destroy
+    @company.destroy
     redirect_to admin_companies_path
   end
 

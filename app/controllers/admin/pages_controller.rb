@@ -1,5 +1,5 @@
 class Admin::PagesController < Admin::BaseController
-  before_action :set_page, only: [:show, :edit, :update]
+  before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   def index
     @q = Page.sorted.ransack(params[:q])
@@ -22,6 +22,11 @@ class Admin::PagesController < Admin::BaseController
   def update
     @page.update(page_params)
     flash[:notice] = 'Good'
+    redirect_to admin_pages_path
+  end
+
+  def destroy
+    @page.destroy
     redirect_to admin_pages_path
   end
 

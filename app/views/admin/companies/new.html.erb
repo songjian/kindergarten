@@ -21,17 +21,7 @@
         <div class="box-header with-border">
           <h3 class="box-title">新增职位</h3>
         </div>
-        <%= simple_form_for [:admin, @company], wrapper: :horizontal_form do |f| %>
-          <%= f.input :name, label: '公司名称', placeholder: '' %>
-          <%= select_tag 'company[organization_category_id]', options_from_collection_for_select(OrganizationCategory.all, "id", "name", @company.organization_category_id), :multiple => false, class:'group_select' %>
-          <%= f.input :contact_name, label: '联系人' %>
-          <%= f.input :contact_phone, label: '联系电话' %>
-          <%= f.input :contact_title, label: '联系人职务' %>
-          <%= f.input :address, label: '地址' %>
-          <div class="box-footer">
-            <%= f.button :submit, '提交' %>
-          </div>
-        <% end %>
+        <%= render 'form' %>  
       </div>
     </div>
   </div>

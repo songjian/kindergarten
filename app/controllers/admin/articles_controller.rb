@@ -1,5 +1,5 @@
 class Admin::ArticlesController < Admin::BaseController
-  before_action :set_article, only: [:show, :edit, :update]
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
     @q = Article.sorted.ransack(params[:q])
@@ -22,6 +22,11 @@ class Admin::ArticlesController < Admin::BaseController
   def update
     @article.update(article_params)
     flash[:notice] = '修改成功'
+    redirect_to admin_articles_path
+  end
+
+  def destroy
+    @article.destroy
     redirect_to admin_articles_path
   end
 

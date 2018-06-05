@@ -54,6 +54,9 @@
                 <%= link_to edit_admin_job_path(job), class: 'btn btn-primary btn-xs' do %>
                   <i class="fa fa-edit"></i> 编辑
                 <% end %>
+                <%= link_to admin_job_path(job), method: :delete, class: 'btn btn-danger btn-xs' do %>
+                  <i class="fa fa-trash-o"></i> 删除
+                <% end %>
               </td>
             </tr>
             <% end %>

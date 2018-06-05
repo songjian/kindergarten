@@ -53,6 +53,9 @@
                 <%= link_to edit_admin_organization_category_path(organization_category), class: 'btn btn-primary btn-xs' do %>
                   <i class="fa fa-edit"></i> 编辑
                 <% end %>
+                <%= link_to admin_organization_category_path(organization_category), method: :delete, class: 'btn btn-danger btn-xs' do %>
+                  <i class="fa fa-trash-o"></i> 删除
+                <% end %>
               </td>
             </tr>
             <% end %>

@@ -20,7 +20,6 @@
       <div class="box">
         <div class="box-header">
           <h3 class="box-title">
-            客户列表
             <div class="btn-group">
               <%= link_to '新增', new_admin_company_path, class: 'btn btn-default btn-xs' %>
             </div>
@@ -60,6 +59,9 @@
               <td>
                 <%= link_to edit_admin_company_path(company), class: 'btn btn-primary btn-xs' do %>
                   <i class="fa fa-edit"></i> 编辑
+                <% end %>
+                <%= link_to admin_company_path(company), method: :delete, class: 'btn btn-danger btn-xs' do %>
+                  <i class="fa fa-trash-o"></i> 删除
                 <% end %>
               </td>
             </tr>

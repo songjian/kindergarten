@@ -1,5 +1,5 @@
 class Admin::JobsController < Admin::BaseController
-  before_action :set_job, only: [:show, :edit, :update]
+  before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   def index
     @q = Job.sorted.ransack(params[:q])
@@ -22,6 +22,11 @@ class Admin::JobsController < Admin::BaseController
   def update
     @job.update(job_params)
     flash[:notice] = 'Good'
+    redirect_to admin_jobs_path
+  end
+
+  def destroy
+    @job.destroy
     redirect_to admin_jobs_path
   end
 

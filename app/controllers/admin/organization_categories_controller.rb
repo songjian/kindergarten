@@ -1,5 +1,5 @@
 class Admin::OrganizationCategoriesController < Admin::BaseController
-  before_action :set_organization_category, only: [:show, :edit, :update]
+  before_action :set_organization_category, only: [:show, :edit, :update, :destroy]
 
   def index
     @q = OrganizationCategory.sorted.ransack(params[:q])
@@ -22,6 +22,11 @@ class Admin::OrganizationCategoriesController < Admin::BaseController
   def update
     @organization_category.update(organization_category_params)
     flash[:notice] = '修改成功'
+    redirect_to admin_organization_categories_path
+  end
+
+  def destroy
+    @organization_category.destroy
     redirect_to admin_organization_categories_path
   end
 
