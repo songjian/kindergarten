@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180525072024) do
+ActiveRecord::Schema.define(version: 20180606061418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20180525072024) do
     t.string "title", comment: "标题"
     t.text "content", comment: "正文"
     t.integer "article_category_id", comment: "资讯分类id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "feedbacks", force: :cascade, comment: "反馈" do |t|
+    t.integer "kind", comment: "反馈主题"
+    t.text "content", comment: "反馈内容"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
