@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     resources :feedbacks do
       patch :switch, on: :member
     end
+    resources :demands do
+      patch :switch, on: :member
+    end
     resources :enterprises
     resources :bosses
     resources :headhunters

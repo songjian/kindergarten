@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180606061418) do
+ActiveRecord::Schema.define(version: 20180607061745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,10 +39,20 @@ ActiveRecord::Schema.define(version: 20180606061418) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "demands", force: :cascade, comment: "需求" do |t|
+    t.text "content", comment: "需求描述"
+    t.integer "kind", default: 1, comment: "需求类型"
+    t.integer "state", default: 0, comment: "状态"
+    t.integer "contact_kind", default: 1, comment: "联系方式类型"
+    t.string "contact", comment: "联系方式"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "feedbacks", force: :cascade, comment: "反馈" do |t|
     t.integer "kind", default: 0, comment: "反馈主题"
     t.text "content", comment: "反馈内容"
-    t.integer "handle", default: 0, comment: "处理的状态 0未处理 1已处理"
+    t.integer "state", default: 0, comment: "状态 0未处理 1已处理"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

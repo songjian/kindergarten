@@ -41,6 +41,7 @@
             <tr>
               <th>反馈主题</th>
               <th>反馈内容</th>
+              <th>反馈时间</th>
               <th>处理</th>
               <th>操作</th>
             </tr>
@@ -48,6 +49,7 @@
             <tr>
               <td><%= feedback.kind %></td>
               <td><%= feedback.content %></td>
+              <td><%= feedback.created_at %></td>
               <td>
                 <% if feedback.handled? %>
                   <%= link_to switch_admin_feedback_path(feedback), method: :patch, class: 'btn btn-success btn-xs' do %>
