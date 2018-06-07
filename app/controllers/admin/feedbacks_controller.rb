@@ -1,5 +1,5 @@
 class Admin::FeedbacksController < Admin::BaseController
-  before_action :set_feedback, only: [:show, :edit, :update, :destroy]
+  before_action :set_feedback, only: [:show, :edit, :update, :destroy, :switch]
 
   def index
     @q = Feedback.sorted.ransack(params[:q])
@@ -17,6 +17,15 @@ class Admin::FeedbacksController < Admin::BaseController
 
   def destroy
     @feedback.destroy
+    redirect_to admin_feedbacks_path
+  end
+
+  def switch
+    if @feedback.handled?
+      @feedback.unhandled!
+    else
+      @feedback.handled!
+    end
     redirect_to admin_feedbacks_path
   end
 
