@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   scope module: 'site' do
     root 'mains#show'
     resources :jobs
+    resource :group_chat
     resources :products, only: :index
     resources :demands, only: [:new, :create, :show]
+    resource :development, only: :show
     get '/p/:alias', to: 'pages#show'
   end
 
