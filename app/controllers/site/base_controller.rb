@@ -1,5 +1,5 @@
 class Site::BaseController < ApplicationController
-  before_action :need_login?
+  # before_action :need_login?
   helper_method :current_administrator
   protect_from_forgery with: :exception
 
