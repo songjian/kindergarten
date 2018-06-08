@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
 //= require jquery3
 //= jquery/dist/jquery.min.js
 //= jquery-ui/jquery-ui.min.js
