@@ -1,4 +1,4 @@
-class Site::JobsController < ApplicationController
+class Site::JobsController < Site::BaseController
   before_action :set_job, only: :show
 
   def index

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   scope module: 'site' do
+    root 'mains#show'
     resources :jobs
+    resources :products, only: :index
     get '/p/:alias', to: 'pages#show'
   end
 
