@@ -15,7 +15,7 @@
 //= require jquery3
 //= jquery/dist/jquery.min.js
 //= jquery-ui/jquery-ui.min.js
-//= bootstrap/dist/js/bootstrap.min.js
+//= bootstrap/dist/js/bootstrap.js
 //= raphael/raphael.min.js
 //= morris.js/morris.min.js
 //= jquery-sparkline/dist/jquery.sparkline.min.js

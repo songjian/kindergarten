@@ -16,3 +16,4 @@
 //= require jquery_ujs
 //= require kindeditor
 //= require select2
+//= bootstrap/dist/js/bootstrap.js
