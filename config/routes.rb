@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     root 'mains#show'
     resources :jobs
     resource :group_chat
-    resources :products, only: :index
+    resources :products, only: [:index, :show]
     resources :demands, only: [:new, :create, :show]
     resources :developments, only: [:index, :show]
     get '/p/:alias', to: 'pages#show'
