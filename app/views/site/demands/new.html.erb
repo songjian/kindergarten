@@ -1,11 +1,16 @@
-<h1>定制开发</h1>
-
-<%= simple_form_for [@demand], wrapper: :horizontal_form do |f| %>
-<%= f.input :kind, collection: Demand.kinds.map {|k,y| k}, label: '需求主题', placeholder: '请选择主题', selected: @demand.kind %>
-<%= f.input :content, label: '需求内容' %>
-<%= f.input :contact_kind, collection: Demand.contact_kinds.map {|k,y| k}, label: '联系方式', placeholder: '请选择联系方式', selected: @demand.contact_kind %>
-<%= f.input :contact, label: '号码' %>
-<div class="box-footer">
-  <%= f.button :submit, '提交' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>定制开发</h1>
+      <%= simple_form_for [@demand], wrapper: :horizontal_form do |f| %>
+      <%= f.input :kind, collection: Demand.kinds.map {|k,y| k}, label: '需求主题', placeholder: '请选择主题', selected: @demand.kind %>
+      <%= f.input :content, label: '需求内容' %>
+      <%= f.input :contact_kind, collection: Demand.contact_kinds.map {|k,y| k}, label: '联系方式', placeholder: '请选择联系方式', selected: @demand.contact_kind %>
+      <%= f.input :contact, label: '号码' %>
+      <div class="box-footer">
+        <%= f.button :submit, '提交' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
-<% end %>

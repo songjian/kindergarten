@@ -1,8 +1,13 @@
-<h1>人才招聘</h1>
-<p>简历投递邮箱：hr@codeorder.cn</p>
-
-<ul>
-  <% Job.all.each do |job| %>
-  <li><%= link_to job.name, job_path(job.id) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>人才招聘</h1>
+      <p>简历投递邮箱：hr@codeorder.cn</p>
+      <ul>
+        <% Job.all.each do |job| %>
+        <li><%= link_to job.name, job_path(job.id) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

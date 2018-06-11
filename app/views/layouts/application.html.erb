@@ -7,7 +7,7 @@
     <title>青岛码序科技有限公司</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    :application, media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag :application, media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -17,16 +17,9 @@
     <![endif]-->
   </head>
   <body>
+    <%= render 'layouts/shared/application_header' %>
     <%= yield %>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <%= Settings.icp_number %>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <%= render 'layouts/shared/application_footer' %>
     <%= javascript_include_tag :application, 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
