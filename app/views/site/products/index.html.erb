@@ -1,14 +1,11 @@
 <div class="container">
   <div class="row">
+    <% @products.each do |product| %>
     <div class="col-md-6">
-      <h2>码序企业信息化系统</h2>
-      <p>码序企业信息化系统是一套全面的企业信息化系统解决方案，系统包括内容管理、客户管理和招聘管理等功能。可帮助企业将关键业务实现信息化管理。</p>
+      <h2><%= product.name %></h2>
+      <p><%= product.abstract %></p>
       <a href="" class="btn btn-primary">了解更多 »</a>
     </div>
-    <div class="col-md-6">
-      <h2>猎头管理系统</h2>
-      <p>适合猎头公司使用的企业管理软件。提供：猎头管理、职位管理和人才库等功能。</p>
-      <a href="" class="btn btn-primary">了解更多 »</a>
-    </div>
+    <% end %>
   </div>
 </div>

@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     get 'login', to: 'sessions#new'
     delete 'logout' => 'sessions#destroy'
     resources :sessions, only: [:create]
-    resources :companies, :jobs, :bosses, :pages, :articles, :article_categories
+    resources :companies, :jobs, :bosses, :pages, :articles, :article_categories, :products
     resources :feedbacks do
       patch :switch, on: :member
     end

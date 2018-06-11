@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180607061745) do
+ActiveRecord::Schema.define(version: 20180611153209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,14 @@ ActiveRecord::Schema.define(version: 20180607061745) do
     t.string "title", comment: "标题"
     t.string "alias", comment: "别名(英文)"
     t.text "content", comment: "正文"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade, comment: "产品" do |t|
+    t.string "name", comment: "产品名称"
+    t.string "abstract", comment: "简介"
+    t.text "content", comment: "产品说明"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

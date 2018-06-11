@@ -1,0 +1,69 @@
+<section class="content-header">
+  <h1>
+    产品管理
+    <small>产品列表</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+      <%= link_to admin_path do %>
+        <i class="fa fa-home"></i> 首页
+      <% end %>
+    </li>
+    <li>产品管理</li>
+    <li class="active">列表</li>
+  </ol>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">
+            <div class="btn-group">
+              <%= link_to '新增', new_admin_product_path, class: 'btn btn-default btn-xs' %>
+            </div>
+          </h3>
+
+          <div class="box-tools">
+
+            <%= search_form_for [:admin, @q] do |f| %>
+              <div class="input-group input-group-sm" style="width: 150px;">
+                <%= f.search_field :name_cont, class: 'form-control pull-right', placeholder: '产品名称' %>
+
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th>产品名称</th>
+              <th>产品描述</th>
+              <th>操作</th>
+            </tr>
+            <% @products.each do |product| %>
+            <tr>
+              <td><%= product.name %></td>
+              <td><%= product.abstract %></td>
+              <td>
+                <%= link_to edit_admin_product_path(product), class: 'btn btn-primary btn-xs' do %>
+                  <i class="fa fa-edit"></i> 编辑
+                <% end %>
+                <%= link_to admin_product_path(product), method: :delete, class: 'btn btn-danger btn-xs' do %>
+                  <i class="fa fa-trash-o"></i> 删除
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
+          </table>
+        </div>
+        <%= paginate @products, views_prefix: 'admin' %>
+      </div>
+    </div>
+  </div>
+</section>
