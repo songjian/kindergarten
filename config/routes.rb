@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resource :group_chat
     resources :products, only: :index
     resources :demands, only: [:new, :create, :show]
-    resource :development, only: :show
+    resources :developments, only: [:index, :show]
     get '/p/:alias', to: 'pages#show'
   end
 
