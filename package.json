@@ -1,5 +1,5 @@
 {
-  "name": "customer",
+  "name": "codeorder-official-website",
   "private": true,
   "dependencies": {
     "admin-lte": "^2.4.3"
