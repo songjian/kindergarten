@@ -8,7 +8,7 @@ default: &default
 development:
   <<: *default
   database: customer_dev
-  username: postgres
+  username: songjian
   password: root
 
 # Warning: The database defined as "test" will be erased and
@@ -21,6 +21,6 @@ test:
 production:
   <<: *default
   database: codeorder_production
+  username: postgres
   host: postgres
   port: 5432
-  password: root
