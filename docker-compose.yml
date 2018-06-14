@@ -9,6 +9,9 @@ app:
     - SECRET_KEY_BASE=9fb5184a8dadd907bafc3e25a2ab6fafea4c205d78c0f0eca60c0e1918c1d2945bdefee1df9976f90902394ccab8b71595e87998166fbe6bab7c119be83e34dc
     - POSTGRES_PASSWORD=root
   links:
+    - "redis:redis"
     - "db:postgres"
   ports:
     - "8080:3000"
+redis:
+  image: docker pull registry.cn-hangzhou.aliyuncs.com/acs-sample/redis-sameersbn
