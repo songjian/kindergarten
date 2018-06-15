@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     get '/p/:alias', to: 'pages#show'
   end
 
+  scope module: :special do
+    resource :vim, only: :show
+  end
+
   namespace :admin do
     get '/', to: 'mains#show'
     get 'login', to: 'sessions#new'
