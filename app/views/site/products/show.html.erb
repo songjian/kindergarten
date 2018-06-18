@@ -2,8 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <h2><%= @product.name %></h2>
-      <p><%= @product.abstract %></p>
-      <p><%= @product.content %></p>
+      <p><%= @product.content.html_safe %></p>
     </div>
   </div>
 </div>

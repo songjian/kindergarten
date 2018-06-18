@@ -31,3 +31,4 @@
 //= admin-lte/dist/js/adminlte.min.js
 //= admin-lte/dist/js/pages/dashboard.js
 //= admin-lte/dist/js/demo.js
+//= require kindeditor

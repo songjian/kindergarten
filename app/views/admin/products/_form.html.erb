@@ -1,7 +1,7 @@
 <%= simple_form_for [:admin, @product], wrapper: :horizontal_form do |f| %>
 <%= f.input :name, label: '产品名称', placeholder: '请输入产品名称' %>
 <%= f.input :abstract, label: '产品简介' %>
-<%= f.input :content, label: '产品说明' %>
+<%= f.input :content, :as => :kindeditor, :label => '产品说明', :input_html => { :width => 800, :height => 300 } %>
 <div class="box-footer">
   <%= f.button :submit, '提交' %>
 </div>
