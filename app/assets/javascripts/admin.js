@@ -25,7 +25,7 @@
 //= require bootstrap-daterangepicker/daterangepicker
 //= require bootstrap-datepicker/dist/js/bootstrap-datepicker
 //= require admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all
-//= require slimscroll/lib/slimscroll
+//= slimscroll/lib/slimscroll
 //= require fastclick/lib/fastclick
 //= require admin-lte/dist/js/adminlte
 //= require admin-lte/dist/js/pages/dashboard
