@@ -1,9 +1,9 @@
 db:
-  image: registry.cn-hangzhou.aliyuncs.com/acs-sample/postgresql-sameersbn:9.4-24
+  image: registry-vpc.cn-hangzhou.aliyuncs.com/acs-sample/postgresql-sameersbn:9.4-24
   environment:
     - POSTGRES_PASSWORD=root
 app:
-  image: registry-internal.cn-beijing.aliyuncs.com/codeorder/codeorder-official-network
+  image: registry-vpc.cn-beijing.aliyuncs.com/codeorder/codeorder-official-network
   environment:
     - RAILS_ENV=production
     - SECRET_KEY_BASE=9fb5184a8dadd907bafc3e25a2ab6fafea4c205d78c0f0eca60c0e1918c1d2945bdefee1df9976f90902394ccab8b71595e87998166fbe6bab7c119be83e34dc
@@ -14,4 +14,4 @@ app:
   ports:
     - "8080:3000"
 redis:
-  image: registry.cn-hangzhou.aliyuncs.com/acs-sample/redis-sameersbn:latest
+  image: registry-vpc.cn-hangzhou.aliyuncs.com/acs-sample/redis-sameersbn:latest
