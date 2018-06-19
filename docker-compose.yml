@@ -13,5 +13,15 @@ app:
     - "db:postgres"
   ports:
     - "8080:3000"
+web:
+  image: nginx
+  links:
+    - app
+  ports:
+    - "8083:80"
+  volumes:
+    - $PWD/docker-conf/nginx:/etc/nginx
+  volumes_from:
+    - app
 redis:
   image: registry.cn-hangzhou.aliyuncs.com/acs-sample/redis-sameersbn:latest
