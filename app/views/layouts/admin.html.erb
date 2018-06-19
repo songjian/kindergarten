@@ -23,7 +23,9 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
-    <%= render 'layouts/shared/admin_header' %>
+    <header class="main-header">
+      <%= render 'layouts/shared/admin_header' %>
+    </header>
 
     <aside class="main-sidebar">
       <%= render 'layouts/shared/admin_sidebar' %>
@@ -33,12 +35,15 @@
       <%= yield %>
     </div>
 
-    <%= render 'layouts/shared/admin_footer' %>
+    <footer class="main-footer">
+      <%= render 'layouts/shared/admin_footer' %>
+    </footer>
+
     <div class="control-sidebar-bg"></div>
   </div>
 
   <script>
-    // $.widget.bridge('uibutton', $.ui.button);
+    $.widget.bridge('uibutton', $.ui.button);
   </script>
 </body>
 </html>
