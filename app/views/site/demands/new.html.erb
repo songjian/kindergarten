@@ -1,6 +1,33 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      开发流程：
+
+      前期接触：需求分析
+      分阶段开发和交付
+      完成交付
+      运维服务
+      优势：
+
+      提供长期技术支持。
+      可定制开发类型：
+
+      网站
+      微信
+      优势领域：
+
+      企业网站
+      公益组织网站
+      企业管理软件
+      视频点播网站
+      大型综合社区网站
+      联系我们：
+
+      QQ: 724385768
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
       <h1>定制开发</h1>
       <%= simple_form_for [@demand], wrapper: :horizontal_form do |f| %>
       <%= f.input :kind, collection: Demand.kinds.map {|k,y| k}, label: '需求主题', placeholder: '请选择主题', selected: @demand.kind %>
