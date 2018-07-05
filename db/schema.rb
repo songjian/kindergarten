@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180611153209) do
+ActiveRecord::Schema.define(version: 20180705140611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,17 @@ ActiveRecord::Schema.define(version: 20180611153209) do
   create_table "jobs", force: :cascade, comment: "职位表" do |t|
     t.string "name", comment: "职位名称"
     t.text "description", comment: "职位描述"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "kindeditor_assets", force: :cascade do |t|
+    t.string "asset"
+    t.integer "file_size"
+    t.string "file_type"
+    t.integer "owner_id"
+    t.string "owner_type"
+    t.string "asset_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
