@@ -12,7 +12,8 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require jquery/dist/jquery
+//= require jquery
+//= require jquery_ujs
 //= require jquery-ui/ui/widget
 //= require bootstrap/dist/js/bootstrap
 //= require raphael/raphael
@@ -25,7 +26,7 @@
 //= require bootstrap-daterangepicker/daterangepicker
 //= require bootstrap-datepicker/dist/js/bootstrap-datepicker
 //= require admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all
-//= slimscroll/lib/slimscroll
+//= require jquery-slimscroll/jquery.slimscroll.js
 //= require fastclick/lib/fastclick
 //= require admin-lte/dist/js/adminlte
 //= require admin-lte/dist/js/pages/dashboard
