@@ -11,10 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require jquery/dist/jquery
 //= require jquery_ujs
-//= require jquery-ui/ui/widget
 //= require bootstrap/dist/js/bootstrap
 //= require fastclick/lib/fastclick
 //= require admin-lte/dist/js/adminlte
