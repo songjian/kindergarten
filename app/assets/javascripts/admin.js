@@ -16,9 +16,10 @@
 //= require jquery_ujs
 //= require bootstrap/dist/js/bootstrap
 //= require fastclick/lib/fastclick
-//= require admin-lte/dist/js/adminlte
+//= require adminlte
 //= require jquery-sparkline/jquery.sparkline
 //= require admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min
 //= require admin-lte/plugins/jvectormap/jquery-jvectormap-world-mill-en
 //= require jquery-slimscroll/jquery.slimscroll.js
 //= require kindeditor
+//= load_kindeditor

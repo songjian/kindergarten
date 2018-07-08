@@ -17,3 +17,4 @@
 //= require kindeditor
 //= require select2
 //= bootstrap/dist/js/bootstrap.js
+//= load_kindeditor
