@@ -1,12 +1,16 @@
-# == Schema Information
+# ## Schema Information
 #
-# Table name: jobs
+# Table name: `jobs`
 #
-#  id          :integer          not null, primary key
-#  name        :string
-#  description :text
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+# ### Columns
+#
+# Name                     | Type               | Attributes
+# ------------------------ | ------------------ | ---------------------------
+# **`id`**                 | `bigint(8)`        | `not null, primary key`
+# **`description(职位描述)`**  | `text`             |
+# **`name(职位名称)`**         | `string`           |
+# **`created_at`**         | `datetime`         | `not null`
+# **`updated_at`**         | `datetime`         | `not null`
 #
 
 class Job < ApplicationRecord
