@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20180709074638) do
 
   create_table "enroll_batches", force: :cascade, comment: "报名批次" do |t|
     t.string "name", comment: "批次名称"
-    t.integer "state", comment: "状态 1启用 2禁用"
+    t.integer "state", default: 2, comment: "状态 1启用 2禁用"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

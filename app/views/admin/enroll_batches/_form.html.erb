@@ -1,0 +1,8 @@
+<%= simple_form_for [:admin, @enroll_batch], wrapper: :horizontal_form do |f| %>
+  <div class="box-body">
+    <%= f.input :name, label: '批次名称', placeholder: '请输入批次名称' %>
+  </div>
+  <div class="box-footer">
+    <%= f.button :submit, '保存' %>
+  </div>
+<% end %>

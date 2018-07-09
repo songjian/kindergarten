@@ -20,6 +20,9 @@ Rails.application.routes.draw do
     delete 'logout' => 'sessions#destroy'
     resources :sessions, only: [:create]
     resources :companies, :jobs, :bosses, :pages, :articles, :article_categories, :products
+    resources :enroll_batches do
+      patch :switch, on: :member
+    end
     resources :feedbacks do
       patch :switch, on: :member
     end
