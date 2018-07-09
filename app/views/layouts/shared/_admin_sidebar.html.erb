@@ -9,12 +9,12 @@
     </li>
     <li class="header">报名管理</li>
     <li>
-      <%= link_to admin_demands_path do %>
+      <%= link_to admin_enrolls_path do %>
       <i class="fa fa-paper-plane"></i>
       <span>报名管理</span>
       <span class="pull-right-container">
-        <% demand_count = Demand.submit.count %>
-        <small class="label pull-right bg-blue"><%= demand_count %></small>
+        <% enroll_count = Enroll.submit.count %>
+        <small class="label pull-right bg-blue"><%= enroll_count %></small>
       </span>
       <% end %>
     </li>

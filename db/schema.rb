@@ -59,8 +59,9 @@ ActiveRecord::Schema.define(version: 20180709074638) do
   create_table "enrolls", force: :cascade, comment: "报名表" do |t|
     t.string "name", comment: "儿童姓名"
     t.integer "enroll_batch_id", comment: "报名批次"
-    t.integer "gender", default: 1, comment: "1男 2女"
+    t.integer "gender", default: 1, comment: "0女 1男"
     t.datetime "birthday", comment: "出生日期"
+    t.integer "status", default: 0, comment: "报名状态 0提交 1成功 2拒绝"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

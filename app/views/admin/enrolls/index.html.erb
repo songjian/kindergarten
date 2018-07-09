@@ -1,0 +1,79 @@
+<section class="content-header">
+  <h1>
+    报名管理
+    <small>报名列表</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+      <%= link_to admin_path do %>
+        <i class="fa fa-home"></i> 首页
+      <% end %>
+    </li>
+    <li>报名管理</li>
+    <li class="active">列表</li>
+  </ol>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">
+            <div class="btn-group">
+              <%= link_to '新增', new_admin_enroll_path, class: 'btn btn-default btn-xs' %>
+            </div>
+          </h3>
+
+          <div class="box-tools">
+
+            <%= search_form_for [:admin, @q] do |f| %>
+              <div class="input-group input-group-sm" style="width: 150px;">
+                <%= f.search_field :name_cont, class: 'form-control pull-right', placeholder: '批次名称' %>
+
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th>孩子姓名</th>
+              <th>出生日期</th>
+              <th>性别</th>
+              <th>报名时间</th>
+              <th>家长姓名</th>
+              <th>联系电话</th>
+              <th>状态</th>
+              <th>操作</th>
+            </tr>
+            <% @enrolls.each do |enroll| %>
+            <tr>
+              <td><%= enroll.name %></td>
+              <td><%= enroll.birthday %></td>
+              <td><%= enroll.female? ? '女' : '男' %></td>
+              <td><%= l enroll.created_at %></td>
+              <td><%= enroll.enroll_batch.name %></td>
+              <td><%= enroll.enroll_batch.name %></td>
+              <td><%= enroll.status %></td>
+              <td>
+                <%= link_to edit_admin_enroll_path(enroll), class: 'btn btn-primary btn-xs' do %>
+                  <i class="fa fa-edit"></i> 编辑
+                <% end %>
+                <%= link_to admin_enroll_path(enroll), method: :delete, class: 'btn btn-danger btn-xs' do %>
+                  <i class="fa fa-trash-o"></i> 删除
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
+          </table>
+        </div>
+        <%= paginate @enrolls, views_prefix: 'admin' %>
+      </div>
+    </div>
+  </div>
+</section>
