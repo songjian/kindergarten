@@ -1,7 +1,7 @@
 <%= simple_form_for [:admin, @enroll], wrapper: :horizontal_form do |f| %>
   <div class="box-body">
     <%= f.input :name, label: '孩子姓名', placeholder: '请输入孩子姓名' %>
-    <%= f.input :gender, label: '性别', as: :radio_buttons, collection: Enroll.genders.map{|k,v| [k, k]}, label_method: :second, value_method: :first %>
+    <%= f.input :gender, label: '性别', as: :radio_buttons, collection: Enroll.genders.map{|k,v| [k, Enroll.enum_name(:gender, k)]}, label_method: :second, value_method: :first %>
     <%= f.input :enroll_batch_id, collection: EnrollBatch.enable, label: '招生批次', placeholder: '请选择批次', selected: @enroll.enroll_batch_id %>
   </div>
   <div class="box-footer">

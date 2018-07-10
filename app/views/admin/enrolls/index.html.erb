@@ -55,11 +55,11 @@
             <tr>
               <td><%= enroll.name %></td>
               <td><%= enroll.birthday %></td>
-              <td><%= enroll.female? ? '女' : '男' %></td>
+              <td><%= enroll.enum_name(:gender) %></td>
               <td><%= l enroll.created_at %></td>
               <td><%= enroll.enroll_batch.name %></td>
               <td><%= enroll.enroll_batch.name %></td>
-              <td><%= enroll.status %></td>
+              <td><%= enroll.enum_name(:status) %></td>
               <td>
                 <%= link_to edit_admin_enroll_path(enroll), class: 'btn btn-primary btn-xs' do %>
                   <i class="fa fa-edit"></i> 编辑

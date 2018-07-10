@@ -21,6 +21,6 @@ class Enroll < ApplicationRecord
 
   scope :sorted, -> { order(created_at: :desc) }
 
-  enum gender: { 'female': 0, 'male': 1 }
-  enum status: { 'submit': 0, 'success': 1, 'reject': 2}
+  enum gender: ['female', 'male']
+  enum status: ['submit', 'success', 'reject'] # 已提交、报名成功、报名拒绝
 end

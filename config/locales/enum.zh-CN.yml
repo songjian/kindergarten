@@ -1,0 +1,11 @@
+---
+zh-CN:
+  enum:
+    enroll:
+      genders:
+        female: "女"
+        male: "男"
+      statuses:
+        submit: "已报名"
+        success: 报名成功
+        reject: 报名失败
