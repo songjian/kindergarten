@@ -178,3 +178,19 @@ zh-CN:
       short: "%m月%d日 %H:%M"
       date_of_birth: "%Y-%m-%d"
     pm: 下午
+  views:
+    pagination:
+      first: "&laquo; 首页"
+      last: "末页 &raquo;"
+      previous: "&laquo;"
+      next: "&raquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "显示 <b>%{first}&nbsp;-&nbsp;%{last}</b> 条记录 总共 <b>%{total}</b> 条记录"

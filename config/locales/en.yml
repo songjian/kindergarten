@@ -33,10 +33,10 @@ en:
   hello: "Hello world"
   views:
     pagination:
-      first: "&laquo; 首页"
-      last: "末页 &raquo;"
-      previous: "&laquo;"
-      next: "&raquo;"
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
       truncate: "&hellip;"
   helpers:
     page_entries_info:
@@ -46,4 +46,4 @@ en:
           one: "Displaying <b>1</b> %{entry_name}"
           other: "Displaying <b>all %{count}</b> %{entry_name}"
       more_pages:
-        display_entries: "显示 <b>%{first}&nbsp;-&nbsp;%{last}</b> 条记录 总共 <b>%{total}</b> 条记录"
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
