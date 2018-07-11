@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180709074638) do
+ActiveRecord::Schema.define(version: 20180711065944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -132,6 +132,12 @@ ActiveRecord::Schema.define(version: 20180709074638) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_positions", force: :cascade, comment: "用户职务" do |t|
+    t.string "name", comment: "职务名称"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade, comment: "用户" do |t|
     t.string "login", comment: "登录名"
     t.string "password_digest", comment: "密码"
@@ -142,6 +148,7 @@ ActiveRecord::Schema.define(version: 20180709074638) do
     t.string "name", comment: "姓名"
     t.string "nickname", comment: "昵称"
     t.string "contact_phone", comment: "联系电话"
+    t.integer "user_position_id", comment: "用户职务id"
   end
 
 end

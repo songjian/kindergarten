@@ -4,18 +4,19 @@
 #
 # ### Columns
 #
-# Name                       | Type               | Attributes
-# -------------------------- | ------------------ | ---------------------------
-# **`id`**                   | `bigint(8)`        | `not null, primary key`
-# **`contact_phone(联系电话)`**  | `string`           |
-# **`login(登录名)`**           | `string`           |
-# **`name(姓名)`**             | `string`           |
-# **`nickname(昵称)`**         | `string`           |
-# **`password_digest(密码)`**  | `string`           |
-# **`remeber_digest`**       | `string`           |
-# **`type(类型)`**             | `string`           |
-# **`created_at`**           | `datetime`         | `not null`
-# **`updated_at`**           | `datetime`         | `not null`
+# Name                            | Type               | Attributes
+# ------------------------------- | ------------------ | ---------------------------
+# **`id`**                        | `bigint(8)`        | `not null, primary key`
+# **`contact_phone(联系电话)`**       | `string`           |
+# **`login(登录名)`**                | `string`           |
+# **`name(姓名)`**                  | `string`           |
+# **`nickname(昵称)`**              | `string`           |
+# **`password_digest(密码)`**       | `string`           |
+# **`remeber_digest`**            | `string`           |
+# **`type(类型)`**                  | `string`           |
+# **`created_at`**                | `datetime`         | `not null`
+# **`updated_at`**                | `datetime`         | `not null`
+# **`user_position_id(用户职务id)`**  | `integer`          |
 #
 
 class User < ApplicationRecord
@@ -24,6 +25,8 @@ class User < ApplicationRecord
   validates :password, :length => { :minimum => 6 }
 
   scope :sorted, -> { order(created_at: :asc) }
+
+  belongs_to :user_position
 
   #用来加密remeber_token，然后保存到数据库中的remeber_digest中去
   def self.digest(string)
