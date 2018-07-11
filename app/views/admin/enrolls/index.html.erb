@@ -43,12 +43,13 @@
           <table class="table table-hover">
             <tr>
               <th>孩子姓名</th>
-              <th>孩子出生日期</th>
+              <th>出生日期</th>
               <th>性别</th>
-              <th>报名时间</th>
               <th>家长姓名</th>
+              <th>与孩子关系</th>
               <th>联系电话</th>
-              <th>状态</th>
+              <th>报名时间</th>
+              <th>报名状态</th>
               <th>操作</th>
             </tr>
             <% @enrolls.each do |enroll| %>
@@ -56,9 +57,10 @@
               <td><%= enroll.child_name %></td>
               <td><%= l enroll.birthday, format: :date_of_birth %></td>
               <td><%= enroll.enum_name(:gender) %></td>
-              <td><%= l enroll.created_at %></td>
               <td><%= enroll.parent_name %></td>
+              <td><%= enroll.enum_name(:parent_child_relationship)%></td>
               <td><%= enroll.parent_contact %></td>
+              <td><%= l enroll.created_at %></td>
               <td><%= enroll.enum_name(:status) %></td>
               <td>
                 <%= link_to edit_admin_enroll_path(enroll), class: 'btn btn-primary btn-xs' do %>
