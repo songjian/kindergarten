@@ -18,9 +18,9 @@ Rails.application.routes.draw do
     resources :enroll_batches do
       patch :switch, on: :member
     end
+    resources :users
     resources :feedbacks do
       patch :switch, on: :member
     end
-    resources :bosses
   end
 end
