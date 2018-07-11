@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     get 'login', to: 'sessions#new'
     delete 'logout' => 'sessions#destroy'
     resources :sessions, only: [:create]
-    resources :pages, :articles, :article_categories
+    resources :pages, :articles, :article_categories, :foods, :food_categories
     resources :enrolls
     resources :enroll_batches do
       patch :switch, on: :member

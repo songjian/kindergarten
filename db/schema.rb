@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180711065944) do
+ActiveRecord::Schema.define(version: 20180711081055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,20 @@ ActiveRecord::Schema.define(version: 20180711065944) do
     t.integer "kind", default: 0, comment: "反馈主题"
     t.text "content", comment: "反馈内容"
     t.integer "state", default: 0, comment: "状态 0未处理 1已处理"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "food_categories", force: :cascade, comment: "食物分类表" do |t|
+    t.string "name", comment: "食物分类名"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "foods", force: :cascade, comment: "食物表" do |t|
+    t.string "name", comment: "食物名称"
+    t.text "description", comment: "简介"
+    t.integer "food_category_id", comment: "食物分类id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,10 @@
+<%= simple_form_for [:admin, @food], html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
+  <div class="box-body">
+    <%= f.input :name, label: '标题', placeholder: '请输入食物名称' %>
+    <%= f.input :food_category_id, collection: FoodCategory.all, label: '食物分类', placeholder: '请选择分类', selected: @food.food_category_id %>
+    <%= f.input :description, :owner=> @food, :as => :kindeditor, :label => '描述' %>
+  </div>
+  <div class="box-footer">
+    <%= f.button :submit, '保存' %>
+  </div>
+<% end %>
