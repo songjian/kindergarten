@@ -9,3 +9,11 @@ zh-CN:
         submit: "已报名"
         success: 报名成功
         reject: 报名失败
+      parent_child_relationships:
+        father: 父亲
+        mother: 母亲
+        grandfather: 爷爷
+        grandmother: 奶奶
+        maternal_grandfather: 外公
+        maternal_grandmother: 外婆
+        other: 其他

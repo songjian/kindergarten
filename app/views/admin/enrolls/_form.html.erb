@@ -1,8 +1,14 @@
-<%= simple_form_for [:admin, @enroll], wrapper: :horizontal_form do |f| %>
+<%= simple_form_for [:admin, @enroll], html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
   <div class="box-body">
-    <%= f.input :name, label: '孩子姓名', placeholder: '请输入孩子姓名' %>
-    <%= f.input :gender, label: '性别', as: :radio_buttons, collection: Enroll.genders.map{|k,v| [k, Enroll.enum_name(:gender, k)]}, label_method: :second, value_method: :first %>
-    <%= f.input :enroll_batch_id, collection: EnrollBatch.enable, label: '招生批次', placeholder: '请选择批次', selected: @enroll.enroll_batch_id %>
+    <%= f.input :child_name, label: '孩子姓名', placeholder: '请输入孩子姓名' %>
+    <%= f.input :child_id_number, label: '孩子二代居民身份证', placeholder: '请输入二代居民身份证' %>
+    <%= f.input :gender, label: '孩子性别', as: :radio_buttons, collection: Enroll.genders.map{|k,v| [k, Enroll.enum_name(:gender, k)]}, label_method: :second, value_method: :first %>
+    <%= f.input :birthday, label: '孩子出生日期', as: :date, placeholder: '请输入出生日期', start_year: Date.today.year - 12, end_year: Date.today.year, order: [ :year, :month, :day] %>
+    <%= f.input :parent_name, label: '家长姓名', placeholder: '请输入家长姓名' %>
+    <%= f.input :parent_id_number, label: '家长二代居民身份证', placeholder: '请输入家长二代居民身份证' %>
+    <%= f.input :parent_child_relationship, collection: Enroll.parent_child_relationships.map{|k,v| [Enroll.enum_name(:parent_child_relationship, k), k]}, label: '家长与孩子关系', selected: @enroll.parent_child_relationship %>
+    <%= f.input :parent_contact, label: '家长联系电话', placeholder: '请输入家长联系电话' %>
+    <%= f.input :enroll_batch_id, collection: EnrollBatch.enable, label: '报名批次', placeholder: '请选择批次', selected: @enroll.enroll_batch_id %>
   </div>
   <div class="box-footer">
     <%= f.button :submit, '保存' %>
