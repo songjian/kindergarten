@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   scope module: 'site' do
     root 'mains#show'
-    resources :jobs
     resource :group_chat
     resources :developments, only: [:index, :show]
     get '/p/:alias', to: 'pages#show'
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
     get 'login', to: 'sessions#new'
     delete 'logout' => 'sessions#destroy'
     resources :sessions, only: [:create]
-    resources :jobs, :bosses, :pages, :articles, :article_categories
+    resources :pages, :articles, :article_categories
     resources :enrolls
     resources :enroll_batches do
       patch :switch, on: :member
