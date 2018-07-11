@@ -7,3 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Administrator.create(login: 'admin', password: 'admin!', nickname: '系统管理员')
+
+# 职务
+UserPosition.create(name: '园长')
+UserPosition.create(name: '幼儿教师')
