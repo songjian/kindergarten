@@ -9,6 +9,12 @@
     </li>
     <li class="header">报名管理</li>
     <li>
+      <%= link_to admin_enroll_batches_path do %>
+      <i class="fa fa-paper-plane"></i>
+      <span>招生管理</span>
+      <% end %>
+    </li>
+    <li>
       <%= link_to admin_enrolls_path do %>
       <i class="fa fa-paper-plane"></i>
       <span>报名管理</span>
@@ -16,12 +22,6 @@
         <% enroll_count = Enroll.submit.count %>
         <small class="label pull-right bg-blue"><%= enroll_count %></small>
       </span>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to admin_enroll_batches_path do %>
-      <i class="fa fa-paper-plane"></i>
-      <span>招生管理</span>
       <% end %>
     </li>
     <li class="header">内容管理</li>
