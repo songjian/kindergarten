@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180711081055) do
+ActiveRecord::Schema.define(version: 20180716083611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20180711081055) do
     t.string "password_digest", comment: "密码"
     t.datetime "expire_at", comment: "过期时间"
     t.integer "state", comment: "状态 1:启用 2:禁用"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "announcements", force: :cascade, comment: "公告表" do |t|
+    t.string "title", comment: "标题"
+    t.text "content", comment: "正文"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

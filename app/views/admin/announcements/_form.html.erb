@@ -1,0 +1,9 @@
+<%= simple_form_for [:admin, @announcement], html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
+  <div class="box-body">
+    <%= f.input :title, label: '标题', placeholder: '请输入公告标题' %>
+    <%= f.input :content, :owner=> @announcement, :as => :kindeditor, :label => '公告内容' %>
+  </div>
+  <div class="box-footer">
+    <%= f.button :submit, '保存' %>
+  </div>
+<% end %>
