@@ -7,9 +7,12 @@
 # Name                            | Type               | Attributes
 # ------------------------------- | ------------------ | ---------------------------
 # **`id`**                        | `bigint(8)`        | `not null, primary key`
+# **`bio(个人简历)`**                 | `text`             |
 # **`contact_phone(联系电话)`**       | `string`           |
+# **`english_name(英文名称)`**        | `string`           |
 # **`login(登录名)`**                | `string`           |
 # **`name(姓名)`**                  | `string`           |
+# **`nationality(国籍)`**           | `string`           |
 # **`nickname(昵称)`**              | `string`           |
 # **`password_digest(密码)`**       | `string`           |
 # **`remeber_digest`**            | `string`           |
@@ -20,13 +23,25 @@
 #
 
 class User < ApplicationRecord
+  before_save :default_values
+
   has_secure_password
   attr_accessor :remeber_digest
-  validates :password, :length => { :minimum => 6 }
+
+  validates :name, :nationality, presence: true
+  validates :password, :length => { :minimum => 6 }, if: :need_password?
+
+  def need_password?
+    self.password.present?
+  end
 
   scope :sorted, -> { order(created_at: :asc) }
 
   belongs_to :user_position
+
+  def default_values
+    self.nationality ||= '中国'
+  end
 
   #用来加密remeber_token，然后保存到数据库中的remeber_digest中去
   def self.digest(string)

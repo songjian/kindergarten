@@ -17,3 +17,7 @@ zh-CN:
         maternal_grandfather: 外公
         maternal_grandmother: 外婆
         other: 其他
+    user:
+      nationality_kinds:
+        national_teacher: '本国教师'
+        foreign_teacher: '外教'

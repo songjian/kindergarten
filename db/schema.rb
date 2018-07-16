@@ -39,16 +39,6 @@ ActiveRecord::Schema.define(version: 20180711081055) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "demands", force: :cascade, comment: "需求" do |t|
-    t.text "content", comment: "需求描述"
-    t.integer "kind", default: 1, comment: "需求类型"
-    t.integer "state", default: 0, comment: "状态"
-    t.integer "contact_kind", default: 1, comment: "联系方式类型"
-    t.string "contact", comment: "联系方式"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "enroll_batches", force: :cascade, comment: "报名批次" do |t|
     t.string "name", comment: "批次名称"
     t.integer "state", default: 2, comment: "状态 1启用 2禁用"
@@ -93,13 +83,6 @@ ActiveRecord::Schema.define(version: 20180711081055) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "jobs", force: :cascade, comment: "职位表" do |t|
-    t.string "name", comment: "职位名称"
-    t.text "description", comment: "职位描述"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "kindeditor_assets", force: :cascade do |t|
     t.string "asset"
     t.integer "file_size"
@@ -111,37 +94,10 @@ ActiveRecord::Schema.define(version: 20180711081055) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "organization_categories", force: :cascade do |t|
-    t.string "name", comment: "分类名称"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "organizations", force: :cascade, comment: "组织" do |t|
-    t.string "name", comment: "组织名称"
-    t.text "describe", comment: "组织描述"
-    t.string "contact_name", comment: "联系人"
-    t.string "contact_phone", comment: "联系电话"
-    t.string "address", comment: "地址"
-    t.string "type", comment: "单表继承类型"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "contact_title", comment: "联系人职位"
-    t.integer "organization_category_id", comment: "分类id"
-  end
-
   create_table "pages", force: :cascade, comment: "单页" do |t|
     t.string "title", comment: "标题"
     t.string "alias", comment: "别名(英文)"
     t.text "content", comment: "正文"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "products", force: :cascade, comment: "产品" do |t|
-    t.string "name", comment: "产品名称"
-    t.string "abstract", comment: "简介"
-    t.text "content", comment: "产品说明"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -163,6 +119,9 @@ ActiveRecord::Schema.define(version: 20180711081055) do
     t.string "nickname", comment: "昵称"
     t.string "contact_phone", comment: "联系电话"
     t.integer "user_position_id", comment: "用户职务id"
+    t.string "english_name", comment: "英文名称"
+    t.text "bio", comment: "个人简历"
+    t.string "nationality", comment: "国籍"
   end
 
 end

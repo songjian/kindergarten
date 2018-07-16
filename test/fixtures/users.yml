@@ -7,9 +7,12 @@
 # Name                            | Type               | Attributes
 # ------------------------------- | ------------------ | ---------------------------
 # **`id`**                        | `bigint(8)`        | `not null, primary key`
+# **`bio(个人简历)`**                 | `text`             |
 # **`contact_phone(联系电话)`**       | `string`           |
+# **`english_name(英文名称)`**        | `string`           |
 # **`login(登录名)`**                | `string`           |
 # **`name(姓名)`**                  | `string`           |
+# **`nationality(国籍)`**           | `string`           |
 # **`nickname(昵称)`**              | `string`           |
 # **`password_digest(密码)`**       | `string`           |
 # **`remeber_digest`**            | `string`           |

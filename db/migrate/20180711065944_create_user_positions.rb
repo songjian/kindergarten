@@ -8,5 +8,10 @@ class CreateUserPositions < ActiveRecord::Migration[5.1]
 
     # users表增加关联关系
     add_column :users, :user_position_id, :integer, comment: '用户职务id'
+
+    # 补充园长和教师的必要字段
+    add_column :users, :english_name, :string, comment: '英文名称'
+    add_column :users, :bio, :text, comment: '个人简历'
+    add_column :users, :nationality, :string, comment: '国籍'
   end
 end

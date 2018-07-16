@@ -1,7 +1,11 @@
 <%= simple_form_for [:admin, @user], html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
   <div class="box-body">
     <%= f.input :name, label: '姓名', placeholder: '' %>
-    <%= f.input :contact_phone, label: '联系电话' %>
+    <%= f.input :english_name, label: '英文姓名', placeholder: '' %>
+    <%= f.input :nationality, label: '国籍', placeholder: '中国' %>
+    <%= f.input :user_position_id, collection: UserPosition.all, label: '职务', placeholder: '请选择职务', selected: @user.user_position_id %>
+    <%= f.input :contact_phone, label: '联系电话', placeholder: '不对外展示，只用作内部联系使用' %>
+    <%= f.input :bio, label: '个人简历' %>
     <%= f.input :login, label: '登录账号', placeholder: '建议使用英文字符' %>
     <%= f.input :password, label: '登录密码', placeholder: '请设置6位以上的密码' %>
   </div>
