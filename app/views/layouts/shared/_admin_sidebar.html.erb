@@ -45,7 +45,29 @@
     </li>
     <li class="treeview">
       <a href="#">
-        <i class="fa fa-book"></i> <span>食谱管理</span>
+        <i class="fa fa-cubes"></i> <span>课程管理</span>
+        <span class="pull-right-container">
+          <i class="fa fa-angle-left pull-right"></i>
+        </span>
+      </a>
+      <ul class="treeview-menu">
+        <li>
+          <%= link_to admin_user_positions_path do %>
+          <i class="fa fa-book"></i>
+          <span>课程列表</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_foods_path do %>
+          <i class="fa fa-gear"></i>
+          <span>课程分类设置</span>
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li class="treeview">
+      <a href="#">
+        <i class="fa fa-cutlery"></i> <span>食谱管理</span>
         <span class="pull-right-container">
           <i class="fa fa-angle-left pull-right"></i>
         </span>
