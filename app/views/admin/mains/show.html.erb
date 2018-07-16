@@ -1,8 +1,7 @@
-<!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
     首页
-    <small></small>
+    <small>Version 1.0</small>
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-home active"></i> 首页</a></li>
@@ -11,65 +10,69 @@
 
 <!-- Main content -->
 <section class="content">
-  <!-- Small boxes (Stat box) -->
-  <div class="row">
-    <div class="col-lg-4 col-xs-4">
-      <!-- small box -->
-      <div class="small-box bg-aqua">
-        <div class="inner">
-          <% headhunters_count = Headhunter.count %>
-          <h3><%= headhunters_count %></h3>
 
-          <p>猎头</p>
-        </div>
-        <div class="icon">
-          <i class="ion ion-bag"></i>
-        </div>
-        <%= link_to admin_headhunters_path, class: 'small-box-footer' do %>
-          查看更多 <i class="fa fa-arrow-circle-right"></i>
-        <% end %>
-      </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-4 col-xs-4">
-      <!-- small box -->
-      <div class="small-box bg-green">
-        <div class="inner">
-          <h3><%= Company.count %></h3>
+    <!-- Info boxes -->
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
 
-          <p>客户</p>
+            <div class="info-box-content">
+              <span class="info-box-text">报名</span>
+              <span class="info-box-number">2<small>%</small></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
         </div>
-        <div class="icon">
-          <i class="ion ion-stats-bars"></i>
-        </div>
-        <%= link_to admin_companies_path, class: "small-box-footer" do %>
-          查看更多 <i class="fa fa-arrow-circle-right"></i>
-        <% end %>
-      </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-4 col-xs-4">
-      <!-- small box -->
-      <div class="small-box bg-yellow">
-        <div class="inner">
-          <h3><%= Job.count %></h3>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
 
-          <p>职位</p>
+            <div class="info-box-content">
+              <span class="info-box-text">课程数量</span>
+              <span class="info-box-number">41,410</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
         </div>
-        <div class="icon">
-          <i class="ion ion-person-add"></i>
+        <!-- /.col -->
+
+        <!-- fix for small devices only -->
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">幼童总数</span>
+              <span class="info-box-number">6</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
         </div>
-        <%= link_to admin_jobs_path, class: 'small-box-footer' do %>
-          查看更多 <i class="fa fa-arrow-circle-right"></i></a>
-        <% end %>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">员工人数</span>
+              <span class="info-box-number">2,000</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
       </div>
-    </div>
-    <!-- ./col -->
-  </div>
-  <!-- /.row -->
-  <!-- Main row -->
-  <div class="row">
-  </div>
-  <!-- /.row (main row) -->
+      <!-- /.row -->
+
+
+
 </section>
 <!-- /.content -->
