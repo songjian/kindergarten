@@ -22,4 +22,4 @@
 //= require admin-lte/plugins/jvectormap/jquery-jvectormap-world-mill-en
 //= require jquery-slimscroll/jquery.slimscroll.js
 //= require kindeditor
-//= load_kindeditor
+//= require load_kindeditor
