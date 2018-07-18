@@ -25,6 +25,14 @@ Page.create(title: 'XXX幼儿园招生简章', alias: 'admissions-guide', conten
 <span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">二、幼儿园招生对象：招收18个月----6岁年龄段幼儿。</span><br />
 <span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">三、幼儿园收费标准：</span></span><span style="font-family:&quot;font-size:14px;background-color:#F8F8F8;"></span>')
 
+# 资讯分类
+ArticleCategory.create(name: '班级动态')
+ArticleCategory.create(name: '卫生保健')
+ArticleCategory.create(name: '教师风采')
+ArticleCategory.create(name: '每周课程')
+ArticleCategory.create(name: '幼儿佳作')
+ArticleCategory.create(name: '特色课程')
+
 # 食物分类
 FoodCategory.create(name: '面食')
 FoodCategory.create(name: '饭类')
