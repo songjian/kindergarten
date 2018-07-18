@@ -15,4 +15,4 @@
 
 ## 依赖
 
-本软件代码部分基于『[码序网站系统](git@code.aliyun.com:oldsong/codeorder-enterprise-information-system.git)』。
+本软件代码部分基于『[码序网站系统](https://code.aliyun.com/oldsong/codeorder-enterprise-information-system)』。
