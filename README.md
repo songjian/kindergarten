@@ -7,6 +7,7 @@
 * 稳定性
 * 宣传效果好
 * 信息公开，让家长更放心
+* 可在线报名
 
 ## 功能
 
@@ -22,3 +23,7 @@
 ## 依赖
 
 本软件代码部分基于『[码序网站系统](https://code.aliyun.com/oldsong/codeorder-enterprise-information-system)』。
+
+## 开发和技术支持
+
+系统由青岛码序科技有限公司开发和提供技术支持。
