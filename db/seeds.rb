@@ -13,7 +13,7 @@ UserPosition.create(name: '园长')
 UserPosition.create(name: '幼儿教师')
 
 # 单页
-Page.create(title: 'XXX幼儿园招生简章', alias: 'admissions-guide', content: '<span style="font-family:&quot;font-size:14px;background-color:#F8F8F8;"><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">一、幼儿园简介</span><br />
+Page.create(title: 'XXX幼儿园招生简章', alias: 'admission-guide', content: '<span style="font-family:&quot;font-size:14px;background-color:#F8F8F8;"><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">一、幼儿园简介</span><br />
 <span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">XXXX幼儿园，创建于XXXX年, 是一所XXXX幼儿园。幼儿园座落于XXXX，紧邻XXXX。本园严格按照规范化幼儿园标准建设，分设学前班、大、中、小班四个教学班。室内儿童化的环境布置，配以先进的中、小型玩教具，使孩子们在富于童趣、安全、舒适的环境中渡过快乐的童年时光。</span><br />
 <span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">一、丰富多彩的</span><a href="https://www.baidu.com/s?wd=%E8%AF%BE%E7%A8%8B%E8%AE%BE%E7%BD%AE&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">课程设置</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">：</span><br />
 <span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">1、 中英文两种语言完成幼儿教育任务，实现真正的</span><a href="https://www.baidu.com/s?wd=%E5%8F%8C%E8%AF%AD%E6%95%99%E5%AD%A6&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">双语教学</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">。让幼儿天天接触英语，大大提高幼儿英语的听、说、读、写能力。</span><br />
