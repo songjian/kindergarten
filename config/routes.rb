@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   scope module: 'site' do
     root 'mains#show'
-    resource :group_chat
     resources :developments, only: [:index, :show]
     get '/p/:alias', to: 'pages#show'
   end
