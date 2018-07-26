@@ -20,14 +20,14 @@
 * 幼儿佳作
 * 课程介绍
 
-## 依赖
-
-本软件代码部分基于『[码序网站系统](https://code.aliyun.com/oldsong/codeorder-enterprise-information-system)』。
-
 ## 上线前准备材料
 
 * 营业执照拍照或扫描件
 * 法人备案幕布照片
+
+## 依赖
+
+本软件代码部分基于『[码序网站系统](https://code.aliyun.com/oldsong/codeorder-enterprise-information-system)』。
 
 ## 开发和技术支持
 
