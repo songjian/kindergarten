@@ -16,7 +16,7 @@ class ArticleCategory < ApplicationRecord
 
   validates :name, presence: true
 
-  scope :sorted, -> { order(created_at: :desc) }
+  scope :sorted, -> { order(created_at: :asc) }
 
   has_many :articles
 end

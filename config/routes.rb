@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   scope module: 'site' do
     root 'mains#show'
-    resources :developments, only: [:index, :show]
     get '/p/:alias', to: 'pages#show'
+    resources :articles
   end
 
   namespace :admin do
