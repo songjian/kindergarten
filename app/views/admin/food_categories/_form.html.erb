@@ -1,8 +1,0 @@
-<%= simple_form_for [:admin, @food_category], html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
-  <div class="box-body">
-    <%= f.input :name, label: '食物分类名称', placeholder: '请输入分类名称' %>
-  </div>
-  <div class="box-footer">
-    <%= f.button :submit, '保存' %>
-  </div>
-<% end %>
