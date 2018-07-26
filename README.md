@@ -24,9 +24,10 @@
 
 本软件代码部分基于『[码序网站系统](https://code.aliyun.com/oldsong/codeorder-enterprise-information-system)』。
 
-## 上线前准备
+## 上线前准备材料
 
-* 准备备案材料（营业执照、法人备案幕布照片）
+* 营业执照
+* 法人备案幕布照片
 
 ## 开发和技术支持
 
