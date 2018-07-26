@@ -7,7 +7,20 @@
       <span>首页</span>
       <% end %>
     </li>
-    <li class="header">报名管理</li>
+    <li class="header">内容管理</li>
+    <li>
+      <%= link_to admin_articles_path do %>
+      <i class="fa fa-newspaper-o"></i>
+      <span>资讯管理</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_pages_path do %>
+      <i class="fa fa-file-text-o"></i>
+      <span>单页管理</span>
+      <% end %>
+    </li>
+    <li class="header">平台管理</li>
     <li>
       <%= link_to admin_enroll_batches_path do %>
       <i class="fa fa-paper-plane"></i>
@@ -24,20 +37,6 @@
       </span>
       <% end %>
     </li>
-    <li class="header">内容管理</li>
-    <li>
-      <%= link_to admin_articles_path do %>
-      <i class="fa fa-newspaper-o"></i>
-      <span>资讯管理</span>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to admin_pages_path do %>
-      <i class="fa fa-file-text-o"></i>
-      <span>单页管理</span>
-      <% end %>
-    </li>
-    <li class="header">平台管理</li>
     <li>
       <%= link_to admin_feedbacks_path do %>
       <i class="fa fa-envelope-o"></i>
