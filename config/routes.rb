@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   scope module: 'site' do
     root 'mains#show'
     get '/p/:alias', to: 'pages#show'
+    resource :enroll, only: [:show, :new, :create]
     resources :articles
   end
 

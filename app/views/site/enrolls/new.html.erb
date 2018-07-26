@@ -1,0 +1,30 @@
+<div class="container">
+  <section class="content-header">
+    <h1>
+      报名
+      <small></small>
+    </h1>
+    <ol class="breadcrumb">
+      <li>
+        <%= link_to admin_path do %>
+        <i class="fa fa-home"></i> 首页
+        <% end %>
+      </li>
+      <li class="active">报名管理</li>
+      <li class="active">新增</li>
+    </ol>
+  </section>
+
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">新增报名</h3>
+          </div>
+          <%= render 'form' %>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
