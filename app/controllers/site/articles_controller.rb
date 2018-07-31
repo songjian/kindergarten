@@ -9,6 +9,7 @@ class Site::ArticlesController < Site::BaseController
   def show
   end
 
+  private
   def set_article
     @article = Article.find params[:id]
   end

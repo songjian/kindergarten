@@ -25,7 +25,7 @@
             <% article_categories = ArticleCategory.sorted %>
             <% article_categories.each do |c| %>
               <li>
-                <%= link_to c.name, articles_path(article_category: c) %>
+                <%= link_to c.name, articles_path('q[article_category_id_eq]': c) %>
               </li>
             <% end %>
           </ul>
