@@ -21,6 +21,11 @@
         <div class="box box-default">
           <div class="box-header with-border">
             <h3 class="box-title">我园资讯</h3>
+            <div class="box-tools pull-right">
+              <%= link_to articles_path('q[article_category_id_eq]': ArticleCategory.find_by(name: '我园资讯')), class: 'btn btn-box-tool' do %>
+              更多 <i class="fa fa-caret-right"></i>
+              <% end %>
+            </div>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
