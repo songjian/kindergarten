@@ -1,7 +1,7 @@
 <section class="content-header">
   <h1>
     首页
-    <small>Version 1.0</small>
+    <small></small>
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-home active"></i> 首页</a></li>
@@ -13,26 +13,28 @@
 
     <!-- Info boxes -->
       <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+            <span class="info-box-icon bg-aqua"><i class="fa fa-child"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">报名</span>
-              <span class="info-box-number">2<small>%</small></span>
+              <span class="info-box-text">新报名申请</span>
+              <% enroll_count = Enroll.submit.count %>
+              <span class="info-box-number"><%= enroll_count %></span>
             </div>
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
         </div>
         <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
+            <span class="info-box-icon bg-red"><i class="fa fa-newspaper-o"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">课程数量</span>
-              <span class="info-box-number">41,410</span>
+              <span class="info-box-text">资讯数量</span>
+              <% article_count = Article.count %>
+              <span class="info-box-number"><%= article_count %></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -40,35 +42,6 @@
         </div>
         <!-- /.col -->
 
-        <!-- fix for small devices only -->
-        <div class="clearfix visible-sm-block"></div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">幼童总数</span>
-              <span class="info-box-number">6</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">员工人数</span>
-              <span class="info-box-number">2,000</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
       </div>
       <!-- /.row -->
 
