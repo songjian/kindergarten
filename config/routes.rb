@@ -19,8 +19,5 @@ Rails.application.routes.draw do
     end
     resources :users
     resources :user_positions
-    resources :feedbacks do
-      patch :switch, on: :member
-    end
   end
 end

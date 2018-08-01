@@ -29,18 +29,12 @@
     </li>
     <li>
       <%= link_to admin_enrolls_path do %>
-      <i class="fa fa-paper-plane"></i>
+      <i class="fa fa-child"></i>
       <span>报名管理</span>
       <span class="pull-right-container">
         <% enroll_count = Enroll.submit.count %>
         <small class="label pull-right bg-blue"><%= enroll_count %></small>
       </span>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to admin_feedbacks_path do %>
-      <i class="fa fa-envelope-o"></i>
-      <span>反馈管理</span>
       <% end %>
     </li>
     <li class="header">系统管理</li>

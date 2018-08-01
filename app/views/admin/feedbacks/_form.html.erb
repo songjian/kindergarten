@@ -1,7 +1,0 @@
-<%= simple_form_for [:admin, @feedback], wrapper: :horizontal_form do |f| %>
-<%= f.input :kind, collection: Feedback.kinds.map {|k,y| k}, label: '反馈主题', placeholder: '请选择主题', selected: @feedback.kind %>
-<%= f.input :content, label: '反馈内容' %>
-<div class="box-footer">
-  <%= f.button :submit, '提交' %>
-</div>
-<% end %>
