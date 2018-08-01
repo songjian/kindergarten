@@ -1,6 +1,7 @@
 <%= simple_form_for [:admin, @article], html: {class: 'form-horizontal'}, wrapper: :horizontal_form do |f| %>
   <div class="box-body">
     <%= f.input :title, label: '标题', placeholder: '请输入资讯标题' %>
+    <%= f.input :author, label: '作者', placeholder: '资讯作者（选填）' %>
     <%= f.input :article_category_id, collection: ArticleCategory.all, label: '资讯分类', placeholder: '请选择分类', selected: @article.article_category_id %>
     <%= f.input :content, :owner=> @article, :as => :kindeditor, :label => '资讯内容' %>
   </div>

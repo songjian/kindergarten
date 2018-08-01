@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180716083611) do
+ActiveRecord::Schema.define(version: 20180801035222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20180716083611) do
     t.integer "article_category_id", comment: "资讯分类id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "author", comment: "作者"
   end
 
   create_table "enroll_batches", force: :cascade, comment: "报名批次" do |t|
