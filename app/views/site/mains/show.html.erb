@@ -24,7 +24,12 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            1
+            <% my_news_5 = ArticleCategory.find_by(name: '我园资讯').articles.take(5) %>
+            <ul>
+            <% my_news_5.each do |news| %>
+              <li><%= link_to news.title, article_path(news), target: '_blank' %></li>
+            <% end %>
+            </ul>
           </div>
           <!-- /.box-body -->
         </div>
@@ -37,7 +42,12 @@
             <h3 class="box-title">课程介绍</h3>
           </div>
           <div class="box-body">
-            The great content goes here
+            <% my_news_5 = ArticleCategory.find_by(name: '课程介绍').articles.take(5) %>
+            <ul>
+            <% my_news_5.each do |news| %>
+              <li><%= link_to news.title, article_path(news), target: '_blank' %></li>
+            <% end %>
+            </ul>
           </div>
           <!-- /.box-body -->
         </div>
@@ -53,7 +63,12 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            1
+            <% my_news_5 = ArticleCategory.find_by(name: '幼儿佳作').articles.take(5) %>
+            <ul>
+            <% my_news_5.each do |news| %>
+              <li><%= link_to news.title, article_path(news), target: '_blank' %></li>
+            <% end %>
+            </ul>
           </div>
           <!-- /.box-body -->
         </div>
@@ -66,7 +81,12 @@
             <h3 class="box-title">教师风采</h3>
           </div>
           <div class="box-body">
-            The great content goes here
+            <% my_news_5 = ArticleCategory.find_by(name: '教师风采').articles.take(5) %>
+            <ul>
+            <% my_news_5.each do |news| %>
+              <li><%= link_to news.title, article_path(news), target: '_blank' %></li>
+            <% end %>
+            </ul>
           </div>
           <!-- /.box-body -->
         </div>
