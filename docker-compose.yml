@@ -13,14 +13,12 @@ app:
   links:
     - "redis:redis"
     - "db:postgres"
-  ports:
-    - "8080:3000"
 web:
   image: nginx
   links:
     - app
   ports:
-    - "8082:80"
+    - "8081:80"
   volumes:
     - $PWD/docker-conf/nginx:/etc/nginx
   volumes_from:
