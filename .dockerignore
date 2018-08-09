@@ -1,4 +1,8 @@
 .git
+.gitignore
+Dockerfile
+docker-compose.yml
+aliyun-container-docker-compose.yml
 node_modules
 npm-debug.log
 .byebug_history
