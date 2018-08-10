@@ -12,16 +12,11 @@ services:
       - RAILS_ENV=production
       - SECRET_KEY_BASE=9fb5184a8dadd907bafc3e25a2ab6fafea4c205d78c0f0eca60c0e1918c1d2945bdefee1df9976f90902394ccab8b71595e87998166fbe6bab7c119be83e34dc
       - POSTGRES_PASSWORD=root
+      - RAILS_SERVE_STATIC_FILES=/public
     depends_on:
       - redis
       - db
-  web:
-    image: nginx
-    depends_on:
-      - app
     ports:
-      - "8081:80"
-    volumes:
-      - $PWD/docker-conf/nginx:/etc/nginx
+      - "8081:3000"
   redis:
     image: registry.cn-hangzhou.aliyuncs.com/acs-sample/redis-sameersbn:latest
