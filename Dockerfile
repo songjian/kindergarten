@@ -27,5 +27,7 @@ COPY . .
 RUN bundle exec rake yarn:install
 RUN bundle exec rake assets:precompile
 
+VOLUME ["./public"]
+
 EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
