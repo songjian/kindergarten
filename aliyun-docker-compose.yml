@@ -1,11 +1,11 @@
-version: '3'
+version: '2'
 services:
   db:
     image: postgres
     environment:
       - POSTGRES_PASSWORD=root
     volumes:
-      - /docker/db/kindergarten:/var/lib/postgresql/data
+      - /docker/data/kindergarten/db:/var/lib/postgresql/data
   app:
     image: registry.cn-beijing.aliyuncs.com/codeorder/kindergarten
     environment:
