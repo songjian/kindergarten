@@ -34,7 +34,7 @@
           </ul>
         </li>
         <li>
-          <%= link_to '后台演示地址', admin_path %>
+          <%= link_to '后台演示地址', admin_path, target: '_blank' %>
         </li>
       </ul>
       <% @q ||= Article.sorted.ransack(params[:q]) %>
