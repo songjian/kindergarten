@@ -25,7 +25,7 @@
 * 营业执照拍照或扫描件
 * 法人备案幕布照片
 
-## 演示地址
+## 演示
 
 * [kindergarten.codeorder.cn](http://kindergarten.codeorder.cn)
 
