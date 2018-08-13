@@ -27,6 +27,7 @@ Page.create(title: 'XXX幼儿园招生简章', alias: 'admission-guide', content
 
 # 资讯分类
 ArticleCategory.create(name: '公告')
+ArticleCategory.create(name: '我园资讯')
 ArticleCategory.create(name: '课程介绍')
 ArticleCategory.create(name: '教师风采')
 ArticleCategory.create(name: '幼儿佳作')
