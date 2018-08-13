@@ -33,6 +33,9 @@
             <% end %>
           </ul>
         </li>
+        <li>
+          <%= link_to '后台演示地址', admin_path %>
+        </li>
       </ul>
       <% @q ||= Article.sorted.ransack(params[:q]) %>
       <%= search_form_for @q, class: 'navbar-form navbar-left', role: 'search' do |f| %>
