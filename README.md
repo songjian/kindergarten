@@ -25,6 +25,10 @@
 * 营业执照拍照或扫描件
 * 法人备案幕布照片
 
+## 演示地址
+
+* [kindergarten.codeorder.cn](http://kindergarten.codeorder.cn)
+
 ## 依赖
 
 本软件代码部分基于『[码序网站系统](https://code.aliyun.com/oldsong/codeorder-enterprise-information-system)』。
