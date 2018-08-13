@@ -2,6 +2,10 @@
 
 本软件是教育网站系列产品中的一员，主要用于幼儿园和学前班等幼儿教育机构。
 
+## 演示
+
+* [kindergarten.codeorder.cn](http://kindergarten.codeorder.cn)
+
 ## 产品优势
 * 易用性
 * 稳定性
@@ -24,10 +28,6 @@
 
 * 营业执照拍照或扫描件
 * 法人备案幕布照片
-
-## 演示
-
-* [kindergarten.codeorder.cn](http://kindergarten.codeorder.cn)
 
 ## 依赖
 
