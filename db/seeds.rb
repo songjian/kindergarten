@@ -6,7 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+# 管理员
 Administrator.create(login: 'admin', password: 'admin!', nickname: '系统管理员')
+
+# DEMO账号
+Administrator.create(login: ENV['DEMO_USER'], password: ENV['DEMO_PASSWORD'], nickname: '系统管理员') if ENV['DEMO_USER']
+
 
 # 职务
 UserPosition.create(name: '园长')

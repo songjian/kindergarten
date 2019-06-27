@@ -3,13 +3,14 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host: db
+  username: postgres
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") { "root" } %>
+  port: 5432
 
 development:
   <<: *default
   database: kindergarten_dev
-  username: postgres
-  password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,4 +24,5 @@ production:
   database: kindergarten_production
   username: postgres
   host: db
+  password: <%= ENV['POSTGRES_PASSWORD'] %>  
   port: 5432

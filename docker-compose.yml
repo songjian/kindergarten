@@ -4,15 +4,17 @@ services:
     image: postgres
     environment:
       - POSTGRES_PASSWORD=root
-    volumes:
-      - ~/docker_data/kindergarten/postgres:/var/lib/postgresql/data
   app:
     build: .
+    image: registry.cn-beijing.aliyuncs.com/codeorder/kindergarten
     environment:
-      - RAILS_ENV=production
       - SECRET_KEY_BASE=9fb5184a8dadd907bafc3e25a2ab6fafea4c205d78c0f0eca60c0e1918c1d2945bdefee1df9976f90902394ccab8b71595e87998166fbe6bab7c119be83e34dc
       - POSTGRES_PASSWORD=root
       - RAILS_SERVE_STATIC_FILES=/public
+      - DEMO_USER=admindemo
+      - DEMO_PASSWORD=admindemo
+    volumes:
+      - .:/usr/src/app
     depends_on:
       - redis
       - db
