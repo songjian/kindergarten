@@ -18,18 +18,152 @@ Administrator.create(login: ENV['DEMO_USER'], password: ENV['DEMO_PASSWORD'], ni
 UserPosition.create(name: '园长')
 UserPosition.create(name: '幼儿教师')
 
-# 单页
-Page.create(title: 'XXX幼儿园招生简章', alias: 'admission-guide', content: '<span style="font-family:&quot;font-size:14px;background-color:#F8F8F8;"><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">一、幼儿园简介</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">XXXX幼儿园，创建于XXXX年, 是一所XXXX幼儿园。幼儿园座落于XXXX，紧邻XXXX。本园严格按照规范化幼儿园标准建设，分设学前班、大、中、小班四个教学班。室内儿童化的环境布置，配以先进的中、小型玩教具，使孩子们在富于童趣、安全、舒适的环境中渡过快乐的童年时光。</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">一、丰富多彩的</span><a href="https://www.baidu.com/s?wd=%E8%AF%BE%E7%A8%8B%E8%AE%BE%E7%BD%AE&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">课程设置</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">：</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">1、 中英文两种语言完成幼儿教育任务，实现真正的</span><a href="https://www.baidu.com/s?wd=%E5%8F%8C%E8%AF%AD%E6%95%99%E5%AD%A6&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">双语教学</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">。让幼儿天天接触英语，大大提高幼儿英语的听、说、读、写能力。</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">2、 为减轻家长负担，免去家长早、晚接送孩子之苦，我园特开办长托班，以培养孩子良好习惯和生活自理能力。白天为幼儿开设丰富的课程，晚上有专职老师陪护，使幼儿体会家的温馨。</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">3、 为2---4岁幼儿开设快乐识字、</span><a href="https://www.baidu.com/s?wd=%E5%9B%BD%E5%AD%A6%E7%BB%8F%E5%85%B8&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">国学经典</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">、全脑开发、</span><a href="https://www.baidu.com/s?wd=%E8%92%99%E6%B0%8F%E6%95%B0%E5%AD%A6&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">蒙氏数学</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">、节拍英语、奥尔夫音乐、游戏、舞蹈、韵律操、绘画等课程，让幼儿在玩儿中学，学中玩儿。</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">4、 为4---6岁幼儿开设逻辑数学、</span><a href="https://www.baidu.com/s?wd=%E5%AD%A6%E5%89%8D%E6%8B%BC%E9%9F%B3&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">学前拼音</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">、汉字启蒙、牛津英语、</span><a href="https://www.baidu.com/s?wd=%E5%9B%BD%E5%AD%A6%E7%BB%8F%E5%85%B8&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">国学经典</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">、自然科学、艺术手工、音乐、美术等课程，大大提高幼儿的</span><a href="https://www.baidu.com/s?wd=%E8%AE%A1%E7%AE%97%E8%83%BD%E5%8A%9B&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">计算能力</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">、阅读能力、书写能力。</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">保障有力的硬件设施：</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">本园配备丰富多样的玩教具，并时时更新，教室备有钢琴、电子琴等乐器,并配备电脑等</span><a href="https://www.baidu.com/s?wd=%E5%A4%9A%E5%AA%92%E4%BD%93%E6%95%99%E5%AD%A6%E8%AE%BE%E5%A4%87&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" class="baidu-highlight">多媒体教学设备</a><span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">。本园还配备专用园车，为小朋友提供更好的服务。聘请专业厨师，为小朋友烹调各种健康美味的菜肴。</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">二、幼儿园招生对象：招收18个月----6岁年龄段幼儿。</span><br />
-<span style="color:#333333;font-family:&quot;font-size:16px;background-color:#FFFFFF;">三、幼儿园收费标准：</span></span><span style="font-family:&quot;font-size:14px;background-color:#F8F8F8;"></span>')
+# 招生简章
+Page.create(title: '青岛西海岸新区第一幼儿园教育集团 2019 年一批招生简章', alias: 'admission-guide', content: '<p align="center" style="margin-left:31.7pt;text-indent:0cm;">
+<span style="font-size:22.0pt;line-height:107%;">青岛西海岸新区第一幼儿园教育集团</span> 
+</p>
+<p align="center" style="margin-left:31.7pt;text-indent:0cm;">
+<span style="font-size:22.0pt;line-height:107%;">2019</span><span style="font-size:22.0pt;line-height:107%;">年一批招生简章</span><span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+根据市、区<span>2019</span>年幼儿园招生工作的有关要求，结合本园实际，现对我园<span>2019</span>年一批招生工作相关事项通知如下：<span></span> 
+</p>
+<p style="margin-left:31.8pt;">
+一、招生对象<span></span> 
+</p>
+<p style="margin-left:32.55pt;">
+具有接受普通教育能力的小班幼儿（小班：<span>2015</span>年<span>9</span>月<span>1</span>日<span>——2016</span>年<span>8</span>月<span>31</span>日期间出生）
+</p>
+<p style="margin-left:32.55pt;">
+二、招生计划<span></span> 
+</p>
+<p style="margin-left:32.55pt;">
+香江路园 （类别：省十佳；保教费<span>667</span>元<span>/</span>月）：小班<span></span> <span>60</span>名；<span></span> 
+</p>
+<p style="margin-left:32.55pt;">
+怡和嘉园园（类别：省十佳；保教费<span>667</span>元<span>/</span>月）：小班<span></span> <span>60</span>名；<span></span> 
+</p>
+<p style="margin-left:32.55pt;">
+盛世江山园（类别：省十佳；保教费<span>667</span>元<span>/</span>月）：小班<span></span> <span>60</span>名；<span></span> 
+</p>
+<p style="margin-left:32.55pt;">
+石雀滩园 （类<u>别</u>：省十佳；保教费<span>667</span>元<span>/</span>月）：小班<span></span> <span>90</span>名；<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+注：长<u>白</u>山路园（长白山路<span>95</span>号）、实验园（珠江路<span>198 </span>号）招生计划及方式将在二批招生简章公布。<span></span> 
+</p>
+<p style="margin-left:32.55pt;">
+三、招生范围香江路园：<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+一类：青岛西海岸新区东小区常住户籍（户籍必须与父母或者祖父母、外祖父母在一起，且其父母或者祖父母、外祖父母为户主）且持有相应东小区房屋产权证（商业用房除外）的适龄幼儿。（提供祖父母或外祖父母房产证明的，需祖孙三代同户籍且需提供房产交易大厅出具的幼儿及其父母在我区内无房证明）。二类：青岛西海岸新区常住户籍（户籍必须与父母或者祖父母、外祖父母在一起，且其父母或者祖父母、外祖父母为户主）且持有相应东小区房屋产权证（商业用房除外）的适龄幼儿。（提供祖父母或外祖父母房产证明的，需祖孙三代同户籍且需提供房产交易大厅出具的幼儿及其父母在我区内无房证明）。怡和嘉园园：<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+一类：青岛西海岸新区怡和嘉园小区常住户籍（户籍必须与父母或者祖父母、外祖父母在一起，且其父母<u>或</u>者祖父母、外祖父母为户主）且持有相应怡和嘉园小区房屋产权证（商业用房除外）的适龄幼儿。（提供祖父母或外祖父母房产证明的，需祖孙三代同户籍且需提供房产交易大厅出具的幼儿及其父母在我区内无房证明）。<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+二类：青岛西海岸新区常住户籍（户籍必须与父母或者祖父母、外祖父母在一起，且其父母或者祖父母、外祖父母为户主）且持有相应怡和嘉园小区房屋产权证（商业用房除外）的适龄幼儿。（提供祖父母或外祖父母房产证明的，需祖孙三代同户籍且需提供房产交易大厅出具的幼儿及其父母在我区内无房证明）。<span></span> 
+</p>
+<p style="margin-left:32.55pt;">
+盛世江山园：<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+一类：青岛西海岸新区盛世江山小区内常住户籍（户籍必须与父母或者祖父母、外祖父母在一起，且其父母或者祖父母、外祖父母为户主）且持有相应盛世江山小区房屋产权证（商业用房除外）的适龄幼儿。（提供祖父母或外祖父母房产证明的，需祖孙三代同户籍且需提供房产交易大厅出具的幼儿及其父母在我区内无房证明）。<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+二类：青岛西海岸新区常住户籍（户籍必须与父母或者祖父母、外祖父母在一起，且其父母或者祖父母、外祖父母为户主）且持有相应盛世江山小区房屋产权证（商业用房除外）的适龄幼儿。（提供祖父母或外祖父母房产证明的，需祖孙三代同户籍且需提供房产交易大厅出具的幼儿及其父母在我区内无房证明）。<span></span> 
+</p>
+<p style="margin-left:28.6pt;">
+石雀滩园：<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+一类：青岛西海岸新区石雀滩片区内常住户籍（户籍必须与父母或者祖父母、外祖父母在一起，且其父母或者祖父母、外祖父母为户主）且持有相应石雀滩片区内小区房屋产权证（商业用房除外）的适龄幼儿。（提供祖父母或外祖父母房产证明的，需祖孙三代同户籍且需提供房产交<u>易</u>大厅出具的幼儿及其父母在我区内无房证明）。<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+二类：青岛西海岸新区常住户籍（户籍必须与父母或者祖父母、外祖父母在一起，且其父母或者祖父母、外祖父母为户主）且持有相应石雀滩片区内小区房屋产权证（商业用房除外）的适龄幼儿。（提供祖父母或外祖父母房产证明的，需祖孙三代同户籍且需提供房产交易大厅出具的幼儿及其父母在我区内无房证明）。<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+注：石雀滩片区界定为<span>——</span>罗浮山路以东，天目山路以西，漓江路以南，银<s>沙</s>滩路以北区域。<span></span> 
+</p>
+<p style="margin-left:64.2pt;text-indent:-32.15pt;">
+<span style="line-height:111%;"><span>四、</span></span>招生办法<span></span> 
+</p>
+<p style="text-indent:31.45pt;">
+本着<span>“</span>公开、公正、透明<span>”</span>的原则，采取现场报名、按类别<u>依</u>次录取的方式招生，经资格审查合格后，一类报名人数等于招生计划时，直接确定录取名单；一类报名人数低于招生计划时，二类进行补录；报名人数超过招生计划时，幼儿园将于报名次日上午<span>9:00</span>现场组织抽签，确定录取幼儿名单。<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+抽签确定入园幼儿时，将由区相关部门工作人员、家长代表等组成的监督团全程监督。<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:31.3pt;">
+招生结束，如有空额，将面向社会进行二批招生，二批招生简章将于<span> 2019 </span>年<span> 6 </span>月<span> 19 </span>日<span> 15:00 </span>在幼儿园网站（<span>www.dyyey.cn</span>）、微信公众号公布，具体招生时间、方式以第二批招生简章为准。<span></span> 
+</p>
+<p style="margin-left:64.2pt;text-indent:-32.15pt;">
+<span style="line-height:111%;"><span>五、</span></span>报名时间<span></span> 
+</p>
+<p style="margin-left:32.55pt;">
+<span>2019</span>年<span>6</span>月<span>18</span>日<span>8:30—14:00</span>，逾期不再受理。<span></span> 
+</p>
+<p style="margin-left:64.2pt;text-indent:-32.15pt;">
+<span style="line-height:111%;"><span>六、</span></span>报名地点<span></span> 
+</p>
+<p style="margin-left:32.55pt;">
+香江路园： 青岛西海岸新区香江路<span>6</span>号；<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:29.65pt;">
+怡和嘉园园：青岛西海岸新区东江路<span>157</span>号怡和嘉园北区内；<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+盛世江山园：青岛西海岸新区富春江路<span>1076</span>号盛世江山南区内；石雀滩园： 青岛西海岸新区漳江路<span>100</span>号。<span></span> 
+</p>
+<p style="margin-left:64.2pt;text-indent:-32.15pt;">
+<span style="line-height:111%;"><span>七、</span></span>报名要求及所需材料<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:33.6pt;">
+<span>1.</span>报名时<span>,</span>请家长（限<span>1</span>名家长，不需带领幼儿）携带以下材料的原件和复印件，到幼儿园现场报名。<span></span> 
+</p>
+<p style="margin-left:24.0pt;text-indent:24.0pt;">
+<span style="line-height:111%;"><span>（1）<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>家长本人身份证；<span></span> 
+</p>
+<p style="margin-left:24.0pt;text-indent:24.0pt;">
+<span style="line-height:111%;"><span>（2）<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>幼儿随父母同户、同住的户口簿全页（包括主页、索引页、户主单页、幼儿单页）；<span></span> 
+</p>
+<p style="margin-left:24.0pt;text-indent:24.0pt;">
+<span style="line-height:111%;"><span>（3）<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>与户籍情况<s>一</s>致的住房产权人的房产证；<span></span> 
+</p>
+<p style="margin-left:24.0pt;text-indent:24.0pt;">
+<span style="line-height:111%;"><span>（4）<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>提供祖父母或外祖父母房产证明的，需提供祖孙三代同户籍（户口簿全页：包括主页、索引页、户主单页、幼儿单<u>页</u>）；且需提供房产交易大厅出具的幼儿及其父母在我区内无房证明。<span></span> 
+</p>
+<p style="margin-left:24.0pt;text-indent:24.0pt;">
+<span style="line-height:111%;"><span>（5）<span>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>幼儿出生医学证明；<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+以上证件均需用<span>A4</span>纸复印全部页面，编号、印章等重要内容务必复印清晰，证件缺失者不予办理。提供材料经工作人员审核无误后，原件由家长带回，所有复印件及报名表留存复审汇总，概不退回。<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+<span>2.</span>如有做假行为，取消该幼儿入园资格及后续报名资格。报名先后顺序不作为录取依据，家长无需过早排队。<span></span> 
+</p>
+<p style="margin-left:64.2pt;text-indent:-32.15pt;">
+<span style="line-height:111%;"><span>八、</span></span>办理录取手续<span></span> 
+</p>
+<p style="margin-left:-.75pt;text-indent:32.05pt;">
+审核结束，幼儿园将确定预录取幼儿名单，电话通知幼儿办理正式录取手续。办理正式录取手续前，家长应带幼儿到区妇幼卫生保健机构按规定项目进行体检。体检合格者，带领幼儿，并携带《儿童健康手册》、儿童健康档案和《儿童预防接种证》等有效证件到幼儿园办理录取手续，逾期不办理者，将取消该幼儿录取资格。<span></span> 
+</p>
+<p style="margin-left:64.2pt;text-indent:-32.15pt;">
+<span style="line-height:111%;"><span>九、</span></span>其它<span><span> </span></span><span><img width="3" height="6" src="file://C:/Users/songj/AppData/Local/Temp/msohtmlclip1/01/clip_image003.gif" /></span><span></span> 
+</p>
+<p style="margin-left:28.2pt;">
+幼儿园具体收费标准以物价部门核定的收费标准为准。<span></span> 
+</p>
+<p style="margin-left:0cm;text-indent:0cm;">
+<span style="font-size:11.0pt;line-height:110%;font-family:&quot;;"><span><span style="background-color:#FFFFFF;color:#000000;font-family:&quot;font-size:14.66px;font-style:normal;font-weight:400;text-decoration:none;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="background-color:#FFFFFF;color:#000000;font-family:&quot;font-size:14.66px;font-style:normal;font-weight:400;text-decoration:none;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="background-color:#FFFFFF;color:#000000;font-family:&quot;font-size:14.66px;font-style:normal;font-weight:400;text-decoration:none;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="background-color:#FFFFFF;color:#000000;font-family:&quot;font-size:14.66px;font-style:normal;font-weight:400;text-decoration:none;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="background-color:#FFFFFF;color:#000000;font-family:&quot;font-size:14.66px;font-style:normal;font-weight:400;text-decoration:none;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="background-color:#FFFFFF;color:#000000;font-family:&quot;font-size:14.66px;font-style:normal;font-weight:400;text-decoration:none;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> </span></span>联系电话：<span>86898702<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>联系人：孔老师
+</p>
+<p style="margin-left:0cm;text-indent:0cm;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 青岛西海岸新区第一幼儿园教育集团
+</p>
+<p style="margin-left:0cm;text-indent:0cm;">
+<span><span style="background-color:#FFFFFF;color:#000000;font-family:&quot;font-size:12px;font-style:normal;font-weight:400;text-decoration:none;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2019</span>年<span>5</span>月<span>17</span>日<span></span> 
+</p>
+<br />')
 
 # 资讯分类
 ArticleCategory.create(name: '公告')
