@@ -17,7 +17,6 @@ Rails.application.routes.draw do
     resources :enroll_batches do
       patch :switch, on: :member
     end
-    resources :users
-    resources :user_positions
+    resources :administrators
   end
 end

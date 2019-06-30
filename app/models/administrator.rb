@@ -21,6 +21,8 @@ class Administrator < ApplicationRecord
   attr_accessor :remeber_digest
   validates :password, :length => { :minimum => 6 }
 
+  scope :sorted, -> { order(created_at: :asc) }
+
   #用来加密remeber_token，然后保存到数据库中的remeber_digest中去
   def self.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

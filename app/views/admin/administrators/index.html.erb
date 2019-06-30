@@ -1,6 +1,6 @@
 <section class="content-header">
   <h1>
-    园长和教师管理
+    管理员管理
     <small></small>
   </h1>
   <ol class="breadcrumb">
@@ -9,7 +9,7 @@
         <i class="fa fa-home"></i> 首页
       <% end %>
     </li>
-    <li>园长和教师管理</li>
+    <li>管理员管理</li>
     <li class="active">列表</li>
   </ol>
 </section>
@@ -21,7 +21,7 @@
         <div class="box-header">
           <h3 class="box-title">
             <div class="btn-group">
-              <%= link_to '新增', new_admin_user_path, class: 'btn btn-default btn-xs' %>
+              <%= link_to '新增', new_admin_administrator_path, class: 'btn btn-default btn-xs' %>
             </div>
           </h3>
 
@@ -50,17 +50,17 @@
               <th>联系电话</th>
               <th>操作</th>
             </tr>
-            <% @users.each do |user| %>
+            <% @administrators.each do |administrator| %>
             <tr>
-              <td><%= user.name %></td>
-              <td><%= user.english_name %></td>
-              <td><%= user.user_position.name %></td>
-              <td><%= user.nationality %></td>
+              <td><%= administrator.name %></td>
+              <td><%= administrator.english_name %></td>
+              <td></td>
+              <td><%= administrator.nationality %></td>
               <td>
-                <a href="tel:<%= user.contact_phone %>"><%= user.contact_phone %></a>
+                <a href="tel:<%= administrator.contact_phone %>"><%= administrator.contact_phone %></a>
               </td>
               <td>
-                <%= link_to edit_admin_user_path(user), class: 'btn btn-primary btn-xs' do %>
+                <%= link_to edit_admin_administrator_path(administrator), class: 'btn btn-primary btn-xs' do %>
                   <i class="fa fa-edit"></i> 编辑
                 <% end %>
               </td>
@@ -69,7 +69,7 @@
           </table>
         </div>
         <!-- /.box-body -->
-        <%= paginate @users, views_prefix: 'admin' %>
+        <%= paginate @administrators, views_prefix: 'admin' %>
       </div>
       <!-- /.box -->
     </div>
