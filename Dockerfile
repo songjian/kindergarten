@@ -15,8 +15,6 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
         nodejs \
     && rm -rf /var/lib/apt/lists/*
 
-RUN npm i -g yarn
-
 RUN gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
 RUN bundle config mirror.https://rubygems.org https://gems.ruby-china.com
 
@@ -24,7 +22,7 @@ WORKDIR /usr/src/app
 COPY Gemfile* ./
 RUN bundle install
 COPY . .
-RUN bundle exec rake yarn:install
+RUN npm i
 RUN bundle exec rake assets:precompile
 
 VOLUME ["/usr/src/app/public/", "/usr/src/app/docker-conf/"]
