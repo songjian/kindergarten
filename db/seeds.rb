@@ -11,7 +11,7 @@
 Administrator.create(login: 'admin', password: 'admin!', nickname: '系统管理员')
 
 # DEMO账号
-Administrator.create(login: ENV['DEMO_USER'], password: ENV['DEMO_PASSWORD'], nickname: '系统管理员') if ENV['DEMO_USER']
+Administrator.create(login: ENV['DEMO_USER'], password: ENV['DEMO_PASSWORD'], nickname: 'DEMO系统管理员') if ENV['DEMO_USER']
 
 # 招生简章
 Page.create(title: '青岛西海岸新区第一幼儿园教育集团 2019 年一批招生简章', alias: 'admission-guide', content: '<p align="center" style="margin-left:31.7pt;text-indent:0cm;">
