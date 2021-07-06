@@ -25,13 +25,6 @@ ActiveRecord::Schema.define(version: 20180801035222) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "announcements", force: :cascade, comment: "公告表" do |t|
-    t.string "title", comment: "标题"
-    t.text "content", comment: "正文"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "article_categories", force: :cascade, comment: "资讯分类" do |t|
     t.string "name", comment: "分类名"
     t.datetime "created_at", null: false
@@ -69,28 +62,6 @@ ActiveRecord::Schema.define(version: 20180801035222) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "feedbacks", force: :cascade, comment: "反馈" do |t|
-    t.integer "kind", default: 0, comment: "反馈主题"
-    t.text "content", comment: "反馈内容"
-    t.integer "state", default: 0, comment: "状态 0未处理 1已处理"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "food_categories", force: :cascade, comment: "食物分类表" do |t|
-    t.string "name", comment: "食物分类名"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "foods", force: :cascade, comment: "食物表" do |t|
-    t.string "name", comment: "食物名称"
-    t.text "description", comment: "简介"
-    t.integer "food_category_id", comment: "食物分类id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "kindeditor_assets", force: :cascade do |t|
     t.string "asset"
     t.integer "file_size"
@@ -108,28 +79,6 @@ ActiveRecord::Schema.define(version: 20180801035222) do
     t.text "content", comment: "正文"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "user_positions", force: :cascade, comment: "用户职务" do |t|
-    t.string "name", comment: "职务名称"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade, comment: "用户" do |t|
-    t.string "login", comment: "登录名"
-    t.string "password_digest", comment: "密码"
-    t.string "remeber_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "type", comment: "类型"
-    t.string "name", comment: "姓名"
-    t.string "nickname", comment: "昵称"
-    t.string "contact_phone", comment: "联系电话"
-    t.integer "user_position_id", comment: "用户职务id"
-    t.string "english_name", comment: "英文名称"
-    t.text "bio", comment: "个人简历"
-    t.string "nationality", comment: "国籍"
   end
 
 end
