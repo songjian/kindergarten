@@ -1,5 +1,6 @@
 .git
 .gitignore
+.dockereignore
 Dockerfile
 docker-compose.yml
 aliyun-container-docker-compose.yml
@@ -9,3 +10,7 @@ npm-debug.log
 .env
 /log/*
 /tmp/*
+script/
+README.md
+Update.md
+*.swp

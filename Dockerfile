@@ -22,8 +22,9 @@ WORKDIR /usr/src/app
 COPY Gemfile* ./
 RUN bundle install
 COPY . .
-RUN npm i
-RUN bundle exec rake assets:precompile
+RUN npm i -g yarn --registry https://registry.npm.taobao.org \
+    && yarn config set registry http://registry.npm.taobao.org/ \
+    && bundle exec rake assets:precompile
 
 VOLUME ["/usr/src/app/public/", "/usr/src/app/docker-conf/"]
 

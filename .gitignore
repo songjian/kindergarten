@@ -30,3 +30,5 @@ config/environments/*.local.yml
 .DS_Store
 
 /public/assets
+
+*.swp
