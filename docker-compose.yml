@@ -4,6 +4,8 @@ services:
     image: postgres
     environment:
       - POSTGRES_PASSWORD=root
+    volumes:
+      - /docker/data/kindergarten/db:/var/lib/postgresql/data
   app:
     build: .
     image: registry.cn-beijing.aliyuncs.com/codeorder/kindergarten
